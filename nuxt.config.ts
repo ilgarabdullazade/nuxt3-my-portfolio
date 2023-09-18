@@ -95,12 +95,13 @@ export default defineNuxtConfig({
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || '',
       siteName: process.env.NUXT_PUBLIC_SITE_NAME || '',
       apiBase: process.env.NUXT_PUBLIC_API_BASE || '',
+      apiHostName: process.env.NUXT_PUBLIC_API_HOST_NAME || '',
       iconLetter: process.env.NUXT_PUBLIC_ICON_LETTER || '',
       ownerName: process.env.NUXT_PUBLIC_OWNER_NAME || '',
       ownerLastName: process.env.NUXT_PUBLIC_OWNER_LAST_NAME || '',
     },
   },
   image: {
-    domains: ['portfolio.emilhumbatov.com'],
+    domains: [process.env.NUXT_PUBLIC_API_HOST_NAME],
   },
 })
