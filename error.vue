@@ -10,7 +10,7 @@ const handleError = () => clearError({ redirect: '/' })
   <NuxtLayout>
     <div class="error-page">
       <div class="error-page__wrapper">
-        <b class="error-page__title">{{ error?.statusCode }}</b>
+        <h4 class="error-page__title">{{ error?.statusCode }}</h4>
         <p class="error-page__subtitle">
           {{
             error?.statusCode === 404 ? $t('error.subtitle') : error?.message
@@ -38,7 +38,7 @@ const handleError = () => clearError({ redirect: '/' })
   // .error-page__title
 
   &__title {
-    @apply text-dark-300 text-[10rem] mb-2;
+    @apply text-dark-300 text-[10rem] leading-snug mb-2;
   }
 
   // .error-page__subtitle
