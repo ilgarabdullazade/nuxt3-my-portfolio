@@ -1,0 +1,54 @@
+<script lang="ts" setup>
+useSeoMeta({
+  title: 'Contact',
+})
+</script>
+
+<template>
+  <div class="contact">
+    <div class="contact__wrapper">
+      <SitePageHeading
+        class="contact__heading"
+        title="navigation.contact"
+        subtitle="contact.subtitle"
+      />
+      <div class="contact__body">
+        <ContactInfo class="contact__info" />
+        <ContactForm class="contact__form" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.contact {
+  // .contact__wrapper
+
+  &__wrapper {
+  }
+
+  // .contact__heading
+
+  &__heading {
+    @apply mb-16 max-lg:mb-12;
+  }
+
+  // .contact__body
+
+  &__body {
+    @apply flex gap-10 mb-16 max-lg:flex-col;
+  }
+
+  // .contact__info
+
+  &__info {
+    @apply md:w-72;
+  }
+
+  // .contact__form
+
+  &__form {
+    @apply flex-1;
+  }
+}
+</style>

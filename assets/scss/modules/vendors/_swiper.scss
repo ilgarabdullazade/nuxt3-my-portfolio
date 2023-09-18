@@ -1,0 +1,18 @@
+.swiper-pagination-line {
+  .swiper-pagination-bullet {
+    @apply bg-dark-300 h-1 rounded w-5 transition-all #{!important};
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-primary w-8 #{!important};
+  }
+}
+
+.swiper-pagination-portfolio {
+  @apply pr-4 text-right #{!important};
+  .swiper-pagination-bullet {
+    @apply bg-background opacity-100 h-4 rounded-full w-4 border-2 border-solid border-dark-300 #{!important};
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-primary #{!important};
+  }
+}

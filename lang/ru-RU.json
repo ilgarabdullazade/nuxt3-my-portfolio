@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "about": "Обо Мне",
+    "portfolio": "Портфолио",
+    "contact": "Контакты"
+  },
+  "about": {
+    "download_cv": "Скачать CV"
+  },
+  "what_i_do": {
+    "title": "Чем Я Занимаюсь"
+  },
+  "testimonials": {
+    "title": "Отзывы"
+  },
+  "skills": {
+    "title": "Навыки"
+  },
+  "hobbies": {
+    "title": "Хобби"
+  },
+  "experience": {
+    "title": "Опыт"
+  },
+  "education": {
+    "title": "Образование"
+  },
+  "portfolio": {
+    "subtitle": "Мои работы",
+    "description": "Описание",
+    "technology": "Технологии"
+  },
+  "contact": {
+    "subtitle": "Свяжитесь с нами",
+    "form_title": "Как я могу вам помочь?",
+    "form_name": "Полное имя",
+    "form_email": "Адрес электронной почты",
+    "form_subject": "Тема",
+    "form_message": "Сообщение",
+    "submit": "Отправить сообщение",
+    "success": "Форма успешно отправлена!"
+  },
+  "error": {
+    "subtitle": "Похоже, ничего не найдено по этому адресу.",
+    "button": "Вернуться на главную"
+  },
+  "footer": {
+    "copyrights": "Все права защищены."
+  }
+}

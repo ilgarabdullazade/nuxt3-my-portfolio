@@ -1,0 +1,11 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "types": [
+      "@nuxtjs/tailwindcss",
+      "@nuxtjs/i18n",
+    ]
+  }
+}

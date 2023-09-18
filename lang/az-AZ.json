@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "about": "Haqqımda",
+    "portfolio": "Portfolio",
+    "contact": "Əlaqə"
+  },
+  "about": {
+    "download_cv": "CV-ni yükləmək"
+  },
+  "what_i_do": {
+    "title": "Mən Nə Edirəm"
+  },
+  "testimonials": {
+    "title": "Rəylər"
+  },
+  "skills": {
+    "title": "Bacarıqlar"
+  },
+  "hobbies": {
+    "title": "Hobbilər"
+  },
+  "experience": {
+    "title": "Təcrübə"
+  },
+  "education": {
+    "title": "Təhsil"
+  },
+  "portfolio": {
+    "subtitle": "Mənim işlərim",
+    "description": "Təsvir",
+    "technology": "Texnologiya"
+  },
+  "contact": {
+    "subtitle": "Əlaqə saxlayın",
+    "form_title": "Sizə necə kömək edə bilərəm?",
+    "form_name": "Ad və Soyad",
+    "form_email": "Elektron poçt ünvanı",
+    "form_subject": "Mövzu",
+    "form_message": "Mesaj",
+    "submit": "Mesaj göndər",
+    "success": "Forma uğurla göndərildi!"
+  },
+  "error": {
+    "subtitle": "Bu ünvan üçün heç nə tapılmadı görünür.",
+    "button": "Əsas səhifəyə qayıdın"
+  },
+  "footer": {
+    "copyrights": "Bütün hüquqlar qorunur."
+  }
+}

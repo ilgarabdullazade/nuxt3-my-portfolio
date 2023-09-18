@@ -1,0 +1,35 @@
+.v-popper {
+  // .v-popper__popper
+
+  &__popper {
+  }
+
+  // .v-popper__wrapper
+
+  &__wrapper {
+  }
+
+  // .v-popper__inner
+
+  &__inner {
+    background: theme('colors.dark.950') !important;
+    color: theme('colors.dark.50') !important;
+    border-color: theme('colors.dark.50') !important;
+  }
+
+  // .v-popper__arrow-container
+
+  &__arrow-container {
+  }
+
+  // .v-popper__arrow-outer
+
+  &__arrow-outer {
+    border-color: theme('colors.dark.950') !important;
+  }
+
+  // .v-popper__arrow-inner
+
+  &__arrow-inner {
+  }
+}

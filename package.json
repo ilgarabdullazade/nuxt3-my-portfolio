@@ -1,0 +1,35 @@
+{
+  "name": "nuxt3-my-portfolio",
+  "version": "1.0.0",
+  "description": "A Nuxt 3 portfolio site",
+  "author": "ilgarabdullazade",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/google-fonts": "^3.0.2",
+    "@nuxtjs/i18n": "8.0.0-rc.4",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@nuxtseo/module": "2.0.0-beta.15",
+    "dayjs-nuxt": "^1.1.2",
+    "nuxt": "^3.7.3",
+    "nuxt-icon": "^0.5.0",
+    "sass": "^1.67.0",
+    "tailwind-scrollbar": "^3.0.5"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^1.0.0",
+    "@nuxt/image": "1.0.0-rc.1",
+    "@vueuse/nuxt": "^10.4.1",
+    "class-variance-authority": "^0.7.0",
+    "floating-vue": "2.0.0-beta.24",
+    "nuxt-swiper": "^1.2.2"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "about": "About Me",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "about": {
+    "download_cv": "Download CV"
+  },
+  "what_i_do": {
+    "title": "What I Do"
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "hobbies": {
+    "title": "Hobbies"
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "education": {
+    "title": "Education"
+  },
+  "portfolio": {
+    "subtitle": "My Works",
+    "description": "Description",
+    "technology": "Technology"
+  },
+  "contact": {
+    "subtitle": "Get in Touch",
+    "form_title": "How Can I Help You?",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_subject": "Subject",
+    "form_message": "Message",
+    "submit": "Send message",
+    "success": "The form has been successfully submitted!"
+  },
+  "error": {
+    "subtitle": "It looks like nothing was found at this location. ",
+    "button": "Go to the main"
+  },
+  "footer": {
+    "copyrights": "All rights reserved."
+  }
+}
