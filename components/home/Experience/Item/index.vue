@@ -31,7 +31,6 @@ const { experience } = defineProps<Props>()
           :alt="experience.title"
           fit="contain"
           width="40"
-          height="40"
         />
       </div>
     </div>
