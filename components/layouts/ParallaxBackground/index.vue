@@ -2,15 +2,20 @@
 import mainBg from '/images/main_bg.png'
 
 const { parallaxStyle } = useParallaxBackground()
+
+const img = useImage()
+const backgroundImageStyles = computed(() => {
+  const imgUrl = img(mainBg, { width: 2560, height: 1440 })
+  return {
+    backgroundImage: `url(${imgUrl})`,
+  }
+})
 </script>
 
 <template>
   <div
     class="parallax-background"
-    :style="{
-      ...parallaxStyle,
-      backgroundImage: `url(${mainBg})`,
-    }"
+    :style="{ ...parallaxStyle, ...backgroundImageStyles }"
   ></div>
 </template>
 
