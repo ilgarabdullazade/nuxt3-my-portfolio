@@ -25,7 +25,7 @@ const { skill } = defineProps<Props>()
             :src="`${publicEnv.apiBase}/${skill.logo}`"
             :alt="skill.name"
             fit="contain"
-            height="64"
+            height="128"
           />
         </div>
       </div>
@@ -44,7 +44,7 @@ const { skill } = defineProps<Props>()
   // .skill-item__image
 
   &__image {
-    @apply lg:grayscale select-none flex w-16 aspect-square mx-auto lg:lg:hover:grayscale-0 lg:transition-all;
+    @apply select-none flex w-16 aspect-square mx-auto;
   }
 }
 </style>
