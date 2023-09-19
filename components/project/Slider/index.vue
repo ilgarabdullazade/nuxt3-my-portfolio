@@ -11,6 +11,7 @@ const { title, gallery } = defineProps<Props>()
 const onSwiperInit = (swiper: any) => {
   const { initDOM } = useAfterOutIn(() => {
     swiper.pagination.enable()
+    swiper.navigation.enable()
   })
   initDOM()
 }
@@ -43,6 +44,8 @@ const onSwiperInit = (swiper: any) => {
         :src="`${publicEnv.apiBase}/${item.image}`"
         :alt="title"
         :title="title"
+        sizes="450px lg:735px xl:660px 2xl:830px"
+        placeholder
       />
     </SwiperSlide>
     <button
@@ -59,7 +62,7 @@ const onSwiperInit = (swiper: any) => {
 
 <style lang="scss" scoped>
 .project-slider {
-  @apply w-full;
+  @apply w-full aspect-video;
   &:hover {
     .project-slider__nav-btn--prev {
       @apply translate-x-0;
@@ -77,7 +80,7 @@ const onSwiperInit = (swiper: any) => {
   // .project-slider__img
 
   &__img {
-    @apply w-full;
+    @apply h-full w-full object-cover;
   }
   // .project-slider__nav-btn
 
