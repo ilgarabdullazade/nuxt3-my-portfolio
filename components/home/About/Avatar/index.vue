@@ -4,13 +4,19 @@ import defaultAvatar from '/images/main_photo.jpg'
 interface Props {
   avatar?: string
 }
+
+const { public: publicEnv } = useRuntimeConfig()
+
 const { avatar } = defineProps<Props>()
 
 const { parallaxStyle } = useParallaxBackground()
 
 const img = useImage()
 const backgroundImageStyles = computed(() => {
-  const imgUrl = img(avatar ?? defaultAvatar, { width: 300, height: 300 })
+  const imgUrl = img(
+    avatar ? `${publicEnv.apiBase}/${avatar}` : defaultAvatar,
+    { width: 300, height: 300 }
+  )
   return {
     backgroundImage: `url(${imgUrl})`,
   }
