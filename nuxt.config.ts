@@ -102,6 +102,9 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    domains: [process.env.NUXT_PUBLIC_API_HOST_NAME ?? ''],
+    domains: [process.env.NUXT_PUBLIC_API_BASE ?? ''],
+    alias: {
+      unsplash: process.env.NUXT_PUBLIC_API_BASE ?? '',
+    },
   },
 })
