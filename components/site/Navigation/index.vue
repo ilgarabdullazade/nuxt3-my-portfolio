@@ -46,12 +46,16 @@ watch(
             $t('navigation.contact')
           }}</NuxtLink>
         </li>
-        <span class="navigation__item--divider"></span>
+        <li class="navigation__item--divider"></li>
       </ul>
       <SiteSocial v-if="isMobile" class="navigation__social"></SiteSocial>
     </div>
 
-    <button @click="toggleMenu" class="navigation__burger navigation-burger">
+    <button
+      @click="toggleMenu"
+      class="navigation__burger navigation-burger"
+      aria-label="Open Navigation Menu"
+    >
       <div
         class="navigation-burger__wrapper"
         :class="{ 'menu-open': showMenu }"
