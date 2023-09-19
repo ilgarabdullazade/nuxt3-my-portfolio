@@ -24,9 +24,9 @@ const { testimonial } = defineProps<Props>()
           {{ testimonial.about }}
         </p>
         <div class="testimonial-item__author">
-          <h5 class="testimonial-item__author--name">
+          <b class="testimonial-item__author--name">
             {{ testimonial.full_name }}
-          </h5>
+          </b>
           <p class="testimonial-item__author--firm">
             {{ testimonial.profession }}
           </p>
