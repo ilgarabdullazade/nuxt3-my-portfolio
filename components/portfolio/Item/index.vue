@@ -19,8 +19,7 @@ const { project } = defineProps<Props>()
           :src="`${publicEnv.apiBase}/${project.preview_image}`"
           :alt="project.title"
           :title="project.title"
-          width="330"
-          height="220"
+          :width="560"
         />
 
         <NuxtLink
@@ -58,7 +57,7 @@ const { project } = defineProps<Props>()
   // .portfolio-item__wrapper
 
   &__wrapper {
-    @apply rounded-xl overflow-hidden relative;
+    @apply aspect-video rounded-xl overflow-hidden relative;
   }
 
   // .portfolio-item__frame
@@ -70,7 +69,7 @@ const { project } = defineProps<Props>()
   // .portfolio-item__img
 
   &__img {
-    @apply relative z-0 transition-transform;
+    @apply relative z-0 transition-transform h-full w-full;
   }
 
   // .portfolio-item__link
