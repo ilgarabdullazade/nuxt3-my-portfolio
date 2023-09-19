@@ -16,7 +16,7 @@ const date = dayjs(`${project.created_date}`).format('MM/DD/YYYY')
     <div class="project-sidebar__wrapper">
       <h3 class="project-sidebar__title">{{ $t('portfolio.description') }}</h3>
       <div class="project-sidebar__information">
-        <div class="project-sidebar__information--item">
+        <div v-if="project.site_url" class="project-sidebar__information--item">
           <Icon name="fa6-solid:globe" />
           <NuxtLink :to="project.site_url" target="_blank">{{
             project.site_url
