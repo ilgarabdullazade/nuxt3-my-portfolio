@@ -29,6 +29,7 @@ const { experience } = defineProps<Props>()
         <NuxtImg
           :src="`${publicEnv.apiBase}/${experience.image}`"
           :alt="experience.title"
+          fit="contain"
           width="40"
           height="40"
         />

@@ -24,6 +24,7 @@ const { skill } = defineProps<Props>()
           <NuxtImg
             :src="`${publicEnv.apiBase}/${skill.logo}`"
             :alt="skill.name"
+            fit="contain"
             width="64"
             height="64"
           />
