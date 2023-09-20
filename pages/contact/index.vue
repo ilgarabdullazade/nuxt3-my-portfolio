@@ -21,11 +21,6 @@ defineOgImage({
         <ContactInfo class="contact__info" />
         <ContactForm class="contact__form" />
       </div>
-      <iframe
-        src="/__og_image__"
-        style="width: 100%; border: none; height: 800px"
-      >
-      </iframe>
     </div>
   </div>
 </template>
