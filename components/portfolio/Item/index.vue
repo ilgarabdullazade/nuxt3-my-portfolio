@@ -50,7 +50,7 @@ const { project } = defineProps<Props>()
     .portfolio-item__img {
       @apply scale-125;
     }
-    .portfolio-item__taglist {
+    .portfolio-item__tag {
       @apply opacity-100;
     }
   }
@@ -69,7 +69,7 @@ const { project } = defineProps<Props>()
   // .portfolio-item__img
 
   &__img {
-    @apply relative z-0 transition-transform h-full w-full;
+    @apply absolute top-1/2 -translate-y-1/2 z-0 transition-transform w-full min-h-full object-cover;
   }
 
   // .portfolio-item__link
@@ -87,13 +87,13 @@ const { project } = defineProps<Props>()
   // .portfolio-item__taglist
 
   &__taglist {
-    @apply flex gap-1 flex-wrap;
+    @apply absolute z-50 flex gap-1 flex-wrap bottom-5 left-5;
   }
 
   // .portfolio-item__tag
 
   &__tag {
-    @apply absolute z-20 text-xs inline-flex py-0.5 px-2 bg-background bottom-5 left-5 rounded transition-opacity opacity-0;
+    @apply text-xs inline-flex py-0.5 px-2 bg-background rounded transition-opacity opacity-0;
   }
 }
 </style>
