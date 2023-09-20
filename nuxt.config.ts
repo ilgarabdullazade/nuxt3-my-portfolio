@@ -30,9 +30,14 @@ export default defineNuxtConfig({
     ],
   },
   site: {
-    url: process.env.NUXT_PUBLIC_SITE_URL,
-    name: process.env.NUXT_PUBLIC_SITE_NAME,
+    url: process.env.NUXT_PUBLIC_SITE_URL ?? '',
+    name: process.env.NUXT_PUBLIC_SITE_NAME ?? '',
+    description: process.env.NUXT_PUBLIC_META_DESCRIPTION ?? '',
+    ogImage: '/og_image.jpg',
     defaultLocale: 'en',
+  },
+  ogImage: {
+    fonts: ['Raleway:700', 'Raleway:400'],
   },
   devtools: { enabled: false },
   modules: [
@@ -99,6 +104,8 @@ export default defineNuxtConfig({
       iconLetter: process.env.NUXT_PUBLIC_ICON_LETTER ?? '',
       ownerName: process.env.NUXT_PUBLIC_OWNER_NAME ?? '',
       ownerLastName: process.env.NUXT_PUBLIC_OWNER_LAST_NAME ?? '',
+      metaDescription: process.env.NUXT_PUBLIC_META_DESCRIPTION ?? '',
+      metaKeywords: process.env.NUXT_PUBLIC_META_KEYWORDS ?? '',
     },
   },
   image: {

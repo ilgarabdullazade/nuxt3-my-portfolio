@@ -8,15 +8,10 @@ const { public: publicEnv } = useRuntimeConfig()
 
 useSeoMeta({
   author: `${publicEnv.siteName}`,
-  description: `An imaginative code architect from Azerbaijan, crafting digital wonders with creativity and precision.`,
-  keywords:
-    'Frontend Developer Baku, Flutter Developer Baku, Web Development Baku, Mobile App Development Baku, React Developer Baku, Vue.js Developer Baku, Next.js Developer Baku, Nuxt.js Developer Baku, Responsive Web Design Baku, Baku Web Developer, Baku Flutter App Developer, Frontend Development Services Baku, Flutter App Development Services Baku, Cross-Platform App Development Baku, Custom Website Development Baku, Frontend and Mobile App Development Projects Baku, Flutter, Frontend and Flutter Developer Portfolio, Web and Mobile Development Expertise Baku, Baku IT Professional, Baku Freelance Developer, Frontend Development in Azerbaijan, Flutter App Development in Azerbaijan,  Freelance Frontend Developer in Baku, Freelance Flutter Developer in Baku, Frontend and Flutter Development Consultation Baku',
+  description: `${publicEnv.metaDescription}`,
+  keywords: `${publicEnv.metaKeywords}`,
   ogType: 'website',
-  ogTitle: `${publicEnv.siteName}`,
-  ogImage: `${publicEnv.siteUrl}/android-chrome-192x192.png`,
-  ogDescription: `${publicEnv.siteName} - an imaginative code architect from Azerbaijan, crafting digital wonders with creativity and precision.`,
-  ogImageHeight: '192',
-  ogImageWidth: '192',
+  ogDescription: `${publicEnv.metaDescription}`,
 })
 </script>
 

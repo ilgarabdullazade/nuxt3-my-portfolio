@@ -10,6 +10,12 @@ const route = useRoute()
 const { data: project } = await useMyFetch<Project>(
   ApiEndpoints.GET_PROJECT(route.params.slug as string)
 )
+
+defineOgImage({
+  component: 'Project',
+  title: project.value?.title,
+  image: project!.value?.preview_image,
+})
 </script>
 
 <template>

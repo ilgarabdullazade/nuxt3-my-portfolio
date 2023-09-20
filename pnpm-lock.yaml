@@ -49,6 +49,9 @@ devDependencies:
   nuxt-icon:
     specifier: ^0.5.0
     version: 0.5.0(vue@3.3.4)
+  nuxt-og-image:
+    specifier: ^2.0.28
+    version: 2.0.28
   sass:
     specifier: ^1.67.0
     version: 1.67.0

@@ -2,6 +2,10 @@
 useSeoMeta({
   title: '',
 })
+
+defineOgImage({
+  component: 'Main',
+})
 </script>
 
 <template>
