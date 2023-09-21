@@ -28,6 +28,7 @@ const { public: publicEnv } = useRuntimeConfig()
           <div class="og-owner__wrapper">
             <div class="og-owner__avatar">
               <NuxtImg
+                class="og-owner__image"
                 :src="`${publicEnv.apiBase}${ApiEndpoints.FREELANCER_AVATAR}`"
                 width="80"
                 height="80"
@@ -113,6 +114,12 @@ const { public: publicEnv } = useRuntimeConfig()
 
   &__avatar {
     @apply h-20 aspect-square border-4 rounded-full border-solid border-background overflow-hidden shadow-avatar;
+  }
+
+  // .og-owner__image
+
+  &__image {
+    @apply w-full h-full;
   }
 
   // .og-owner__name

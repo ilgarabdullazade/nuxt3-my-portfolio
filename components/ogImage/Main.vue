@@ -17,9 +17,10 @@ const { public: publicEnv } = useRuntimeConfig()
         <div class="og-owner__wrapper">
           <div class="og-owner__avatar">
             <NuxtImg
+              class="og-owner__image"
               :src="`${publicEnv.apiBase}${ApiEndpoints.FREELANCER_AVATAR}`"
-              width="240"
-              height="240"
+              width="256"
+              height="256"
             />
           </div>
           <div class="og-owner__info">
@@ -58,13 +59,19 @@ const { public: publicEnv } = useRuntimeConfig()
   // .og-owner__wrapper
 
   &__wrapper {
-    @apply flex items-center gap-12 pt-10 px-24;
+    @apply flex items-center gap-12 py-10 px-24;
   }
 
   // .og-owner__avatar
 
   &__avatar {
-    @apply h-60 shrink-0 aspect-square border-[1rem] rounded-full border-solid border-background overflow-hidden shadow-avatar;
+    @apply h-64 shrink-0 aspect-square border-[1rem] rounded-full border-solid border-background overflow-hidden shadow-avatar;
+  }
+
+  // .og-owner__image
+
+  &__image {
+    @apply w-full h-full;
   }
 
   // .og-owner__info

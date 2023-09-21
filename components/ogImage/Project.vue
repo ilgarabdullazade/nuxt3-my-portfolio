@@ -29,7 +29,12 @@ const { ogImage } = useSiteConfig()
           <div class="og-project__caption og-owner">
             <div class="og-owner__wrapper">
               <div class="og-owner__avatar">
-                <NuxtImg :src="`${ogImage}`" width="80" height="80" />
+                <NuxtImg
+                  class="og-owner__image"
+                  :src="`${ogImage}`"
+                  width="80"
+                  height="80"
+                />
               </div>
               <div class="og-owner__name">
                 {{ publicEnv.ownerName }}
@@ -100,6 +105,12 @@ const { ogImage } = useSiteConfig()
 
   &__avatar {
     @apply h-20 aspect-square border-4 rounded-full border-solid border-background overflow-hidden shadow-avatar;
+  }
+
+  // .og-owner__image
+
+  &__image {
+    @apply w-full h-full;
   }
 
   // .og-owner__name
