@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL ?? '',
     name: process.env.NUXT_PUBLIC_SITE_NAME ?? '',
     description: process.env.NUXT_PUBLIC_META_DESCRIPTION ?? '',
-    ogImage: '/og_image.jpg',
+    ogImage: process.env.NUXT_PUBLIC_META_OG_IMAGE ?? '',
     defaultLocale: 'en',
   },
   ogImage: {
@@ -106,6 +106,7 @@ export default defineNuxtConfig({
       ownerLastName: process.env.NUXT_PUBLIC_OWNER_LAST_NAME ?? '',
       metaDescription: process.env.NUXT_PUBLIC_META_DESCRIPTION ?? '',
       metaKeywords: process.env.NUXT_PUBLIC_META_KEYWORDS ?? '',
+      metaOgImage: process.env.NUXT_PUBLIC_META_OG_IMAGE ?? '',
     },
   },
   image: {
