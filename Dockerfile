@@ -4,17 +4,17 @@ FROM node:${NODE_VERSION}-slim as base
 
 ARG PORT=3000
 
-RUN npm install -g pnpm
+RUN npm install -g yarn 
 
 WORKDIR /app
 
 COPY package.json .
 
-RUN pnpm install
+RUN yarn install
 
 COPY . .
 
-RUN pnpm run build
+RUN yarn build
 
 ENV NODE_ENV=production
 
