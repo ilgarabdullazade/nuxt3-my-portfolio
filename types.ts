@@ -70,3 +70,8 @@ export interface Project extends ProjectThumb {
 export interface GalleryImage {
   image: string
 }
+
+export interface SeoInfo {
+  meta_description: string
+  meta_keywords: string
+}

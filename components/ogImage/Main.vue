@@ -4,10 +4,10 @@ defineOptions({
 })
 defineProps({
   title: String,
+  description: String,
 })
 
 const { public: publicEnv } = useRuntimeConfig()
-const { ogImage, description } = useSiteConfig()
 </script>
 
 <template>
@@ -16,7 +16,11 @@ const { ogImage, description } = useSiteConfig()
       <div class="og-main__owner og-owner">
         <div class="og-owner__wrapper">
           <div class="og-owner__avatar">
-            <NuxtImg :src="`${ogImage}`" width="240" height="240" />
+            <NuxtImg
+              :src="`${publicEnv.apiBase}${ApiEndpoints.FREELANCER_AVATAR}`"
+              width="240"
+              height="240"
+            />
           </div>
           <div class="og-owner__info">
             <div class="og-owner__name">

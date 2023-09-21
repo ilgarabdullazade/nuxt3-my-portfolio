@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { SeoInfo } from './types'
+
 const { finalizePendingLocaleChange } = useI18n()
 
 const onBeforeEnter = async () => {
@@ -6,12 +8,19 @@ const onBeforeEnter = async () => {
 }
 const { public: publicEnv } = useRuntimeConfig()
 
+const { data: seoInfo } = await useMyFetch<SeoInfo>(ApiEndpoints.GET_SEO)
+
 useSeoMeta({
   author: `${publicEnv.siteName}`,
-  description: `${publicEnv.metaDescription}`,
-  keywords: `${publicEnv.metaKeywords}`,
+  description: seoInfo.value?.meta_description,
+  keywords: seoInfo.value?.meta_keywords,
   ogType: 'website',
-  ogDescription: `${publicEnv.metaDescription}`,
+  ogDescription: seoInfo.value?.meta_description,
+})
+
+defineOgImage({
+  component: 'Main',
+  description: seoInfo.value?.meta_description,
 })
 </script>
 
