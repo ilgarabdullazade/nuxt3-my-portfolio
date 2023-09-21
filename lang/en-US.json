@@ -28,7 +28,9 @@
   "portfolio": {
     "subtitle": "My Works",
     "description": "Description",
-    "technology": "Technology"
+    "technology": "Technology",
+    "not_found_title": "No Projects Found",
+    "not_found_caption": "Unfortunately, we couldn't find any projects at the moment. Please check back later."
   },
   "contact": {
     "subtitle": "Get in Touch",

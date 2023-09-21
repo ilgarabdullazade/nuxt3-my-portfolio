@@ -28,7 +28,9 @@
   "portfolio": {
     "subtitle": "Mənim işlərim",
     "description": "Təsvir",
-    "technology": "Texnologiya"
+    "technology": "Texnologiya",
+    "not_found_title": "Mövcud layihələr yoxdur",
+    "not_found_caption": "Təəssüf ki, hazırda mövcud layihələrimiz yoxdur. Xahiş edirik daha sonra qayıdasınız."
   },
   "contact": {
     "subtitle": "Əlaqə saxlayın",

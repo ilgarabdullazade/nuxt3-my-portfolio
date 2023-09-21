@@ -7,7 +7,7 @@ const { data: projectList } = await useMyFetch<ProjectThumb[]>(
 </script>
 
 <template>
-  <section class="portfolio-grid">
+  <section v-if="projectList?.length" class="portfolio-grid">
     <div class="portfolio-grid__wrapper">
       <PortfolioItem
         v-for="project in projectList"
@@ -17,6 +17,11 @@ const { data: projectList } = await useMyFetch<ProjectThumb[]>(
       />
     </div>
   </section>
+  <SiteNotFound
+    v-else
+    title="portfolio.not_found_title"
+    caption="portfolio.not_found_caption"
+  />
 </template>
 
 <style lang="scss" scoped>

@@ -20,7 +20,7 @@
   // .layout__scroll
 
   &__scroll {
-    @apply w-full h-full min-h-full lg:justify-center flex lg:items-center;
+    @apply w-full h-full min-h-screen flex lg:justify-center;
     @media (min-width: 1024px) {
       perspective: 1200px;
     }
@@ -29,7 +29,7 @@
   // .layout__container
 
   &__container {
-    @apply flex max-lg:overflow-x-hidden lg:my-10 lg:mx-9 animate-flipInLeft min-h-full flex-col w-full px-16 max-lg:px-10 pt-10 max-lg:pt-14 max-sm:px-6 bg-background lg:rounded-40 lg:max-w-6xl lg:shadow-container;
+    @apply flex max-lg:overflow-x-hidden  pt-10 lg:m-9 animate-flipInLeft min-h-full flex-col w-full px-16 max-lg:px-10 max-lg:pt-14 max-sm:px-6 bg-background lg:rounded-40 lg:max-w-6xl lg:shadow-container;
   }
 
   // .layout__header
@@ -42,6 +42,7 @@
   // .layout__main
 
   &__main {
+    @apply flex-1;
   }
 
   // .layout__footer
