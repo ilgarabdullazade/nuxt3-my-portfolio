@@ -23,7 +23,11 @@ defineOgImage({
     <div class="project__wrapper">
       <div class="project__header">
         <div class="project__close">
-          <NuxtLink :to="localePath('/portfolio')" class="project__close-btn">
+          <NuxtLink
+            :to="localePath('/portfolio')"
+            aria-label="Back to portfolio"
+            class="project__close-btn"
+          >
             <Icon name="ci:close-lg" />
           </NuxtLink>
         </div>
