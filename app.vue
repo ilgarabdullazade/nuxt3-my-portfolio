@@ -27,7 +27,7 @@ useSeoMeta({
 defineOgImage({
   component: 'Main',
   description: seoInfo.value?.meta_description,
-  backgroundColor: colors.primary[500],
+  background: colors.primary[400],
 })
 </script>
 

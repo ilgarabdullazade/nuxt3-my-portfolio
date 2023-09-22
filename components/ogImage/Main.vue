@@ -3,16 +3,21 @@ defineOptions({
   inheritAttrs: false,
 })
 defineProps({
-  title: String,
-  description: String,
-  backgroundColor: String,
+  description: {
+    type: String,
+    default: 'Set a description to change me.',
+  },
+  background: {
+    type: String,
+    default: 'white',
+  },
 })
 
 const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>
-  <div :style="{ backgroundColor }" class="w-full relative p-6">
+  <div :style="{ background }" class="w-full relative p-6">
     <div class="bg-white rounded-30 h-full flex items-center justify-center">
       <div class="flex items-center gap-12 py-10 px-24">
         <div
