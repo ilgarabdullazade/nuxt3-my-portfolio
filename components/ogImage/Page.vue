@@ -3,14 +3,14 @@ defineOptions({
   inheritAttrs: false,
 })
 defineProps({
-  title: String,
+  title: { type: String, default: 'Og Image Template' },
 })
 
 const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>
-  <div class="og-page">
+  <div :style="{ backgroundColor: publicEnv.sitePrimaryColor }" class="og-page">
     <div class="og-page__wrapper">
       <div class="og-page__circles">
         <div class="og-page__circle og-page__circle--big">
@@ -50,11 +50,11 @@ const { public: publicEnv } = useRuntimeConfig()
   @apply box-border;
 }
 .og-page {
-  @apply w-full relative bg-primary;
+  @apply relative w-full;
   // .og-page__wrapper
 
   &__wrapper {
-    @apply p-14 h-full;
+    @apply h-full p-14;
   }
 
   // .og-page__circles
@@ -66,7 +66,7 @@ const { public: publicEnv } = useRuntimeConfig()
   // .og-page__circle
 
   &__circle {
-    @apply border-4 border-solid rounded-full border-background absolute flex items-center justify-center aspect-square;
+    @apply absolute flex items-center justify-center border-4 border-white border-solid rounded-full aspect-square;
   }
 
   // .og-page__circle--big
@@ -90,12 +90,12 @@ const { public: publicEnv } = useRuntimeConfig()
   // .og-page__context
 
   &__context {
-    @apply flex flex-col justify-between h-full w-1/2;
+    @apply flex flex-col justify-between w-1/2 h-full;
   }
   // .og-page__title
 
   &__title {
-    @apply text-background text-7xl my-4;
+    @apply my-4 text-white text-7xl;
   }
 
   // .og-page__caption
@@ -113,7 +113,7 @@ const { public: publicEnv } = useRuntimeConfig()
   // .og-owner__avatar
 
   &__avatar {
-    @apply h-20 aspect-square border-4 rounded-full border-solid border-background overflow-hidden shadow-avatar;
+    @apply h-20 overflow-hidden border-4 border-white border-solid rounded-full aspect-square shadow-avatar;
   }
 
   // .og-owner__image
@@ -125,7 +125,7 @@ const { public: publicEnv } = useRuntimeConfig()
   // .og-owner__name
 
   &__name {
-    @apply text-background text-4xl font-bold;
+    @apply text-4xl font-bold text-white;
     span {
       @apply font-normal;
     }
