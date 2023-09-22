@@ -11,6 +11,7 @@ const { public: publicEnv } = useRuntimeConfig()
 const { data: seoInfo } = await useMyFetch<SeoInfo>(ApiEndpoints.GET_SEO)
 
 useSeoMeta({
+  title: `${publicEnv.siteName}`,
   author: `${publicEnv.siteName}`,
   description: seoInfo.value?.meta_description,
   keywords: seoInfo.value?.meta_keywords,
