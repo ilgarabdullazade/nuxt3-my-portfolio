@@ -28,7 +28,12 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <button ref="scrollButton" class="scroll-to-top" @click="scrollToTop">
+  <button
+    ref="scrollButton"
+    class="scroll-to-top"
+    aria-label="Scroll to Top"
+    @click="scrollToTop"
+  >
     <Icon name="simple-line-icons:arrow-up" />
   </button>
 </template>
