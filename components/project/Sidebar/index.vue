@@ -14,7 +14,9 @@ const date = dayjs(`${project.created_date}`).format('MM/DD/YYYY')
 <template>
   <div class="project-sidebar">
     <div class="project-sidebar__wrapper">
-      <h3 class="project-sidebar__title">{{ $t('portfolio.description') }}</h3>
+      <strong class="project-sidebar__title">{{
+        $t('portfolio.description')
+      }}</strong>
       <div class="project-sidebar__information">
         <div v-if="project.site_url" class="project-sidebar__information--item">
           <Icon name="fa6-solid:globe" />
