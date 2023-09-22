@@ -1,7 +1,9 @@
 <script setup lang="ts">
+const localePath = useLocalePath()
+
 interface Props {
-  title: String
-  caption: String
+  title: string
+  caption: string
 }
 const { title, caption } = defineProps<Props>()
 </script>
@@ -11,7 +13,11 @@ const { title, caption } = defineProps<Props>()
     <div class="empty-block__wrapper">
       <h3 class="empty-block__title">{{ $t(title) }}</h3>
       <span class="empty-block__text">{{ $t(caption) }}</span>
-      <SiteButton intent="primary" class="empty-block__button">
+      <SiteButton
+        :to="localePath('/')"
+        intent="primary"
+        class="empty-block__button"
+      >
         {{ $t('error.button') }}
       </SiteButton>
     </div>
