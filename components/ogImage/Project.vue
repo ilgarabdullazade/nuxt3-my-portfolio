@@ -3,8 +3,8 @@ defineOptions({
   inheritAttrs: false,
 })
 defineProps({
-  title: String,
-  image: String,
+  title: { type: String, default: 'Og Image Template' },
+  image: { type: String, required: true },
 })
 
 const { public: publicEnv } = useRuntimeConfig()
@@ -12,114 +12,43 @@ const { ogImage } = useSiteConfig()
 </script>
 
 <template>
-  <div class="og-project">
-    <div class="og-project__wrapper">
-      <div class="og-project__circle">
+  <div
+    :style="{ backgroundColor: publicEnv.sitePrimaryColor ?? '#ff9638' }"
+    class="relative w-full"
+  >
+    <div class="h-full p-14">
+      <div
+        class="absolute left-1/2 w-[1030px] h-[1030px] bottom-0 border-4 border-solid rounded-full border-white flex items-end overflow-hidden"
+      >
         <NuxtImg
-          class="og-project__img"
+          class="h-[640px] w-[660px] object-cover"
           :src="`${publicEnv.apiBase}/${image}`"
           height="640"
         />
       </div>
-      <div class="og-project__body">
-        <div class="og-project__context">
-          <h1 class="og-project__title">
-            {{ title }}
-          </h1>
-          <div class="og-project__caption og-owner">
-            <div class="og-owner__wrapper">
-              <div class="og-owner__avatar">
-                <NuxtImg
-                  class="og-owner__image"
-                  :src="`${ogImage}`"
-                  width="80"
-                  height="80"
-                />
-              </div>
-              <div class="og-owner__name">
-                {{ publicEnv.ownerName }}
-                <span>{{ publicEnv.ownerLastName }}</span>
-              </div>
-            </div>
+      <div class="flex flex-col justify-between w-1/2 h-full">
+        <h1 class="my-4 text-white text-7xl">
+          {{ title }}
+        </h1>
+        <div class="flex flex-col">
+          <div
+            class="flex h-24 w-24 overflow-hidden border-4 border-white border-solid rounded-full shadow-avatar"
+          >
+            <NuxtImg
+              class="w-full h-full"
+              :src="`${publicEnv.apiBase}${ApiEndpoints.FREELANCER_AVATAR}`"
+              width="80"
+              height="80"
+            />
           </div>
+          <h3 class="text-4xl font-bold text-white my-2.5">
+            {{ publicEnv.ownerName }}
+            <span class="pl-1.5 font-normal">{{
+              publicEnv.ownerLastName
+            }}</span>
+          </h3>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-* {
-  @apply box-border;
-}
-.og-project {
-  @apply w-full relative bg-primary;
-  // .og-project__wrapper
-
-  &__wrapper {
-    @apply p-14 h-full box-border;
-  }
-
-  // .og-project__circles
-
-  &__circle {
-    @apply absolute left-1/2 w-[1030px] aspect-square bottom-0 border-4 border-solid rounded-full border-background flex items-end overflow-hidden;
-  }
-
-  // .og-project__img
-
-  &__img {
-    @apply h-[640px] aspect-square object-cover;
-  }
-
-  // .og-project__body
-
-  &__body {
-    @apply flex h-full;
-  }
-
-  // .og-project__context
-
-  &__context {
-    @apply flex flex-col justify-between h-full flex-shrink-0 w-1/2 pr-14;
-  }
-  // .og-project__title
-
-  &__title {
-    @apply text-background text-7xl my-4;
-  }
-
-  // .og-project__caption
-
-  &__caption {
-  }
-}
-.og-owner {
-  // .og-owner__wrapper
-
-  &__wrapper {
-    @apply flex items-center gap-5;
-  }
-
-  // .og-owner__avatar
-
-  &__avatar {
-    @apply h-20 aspect-square border-4 rounded-full border-solid border-background overflow-hidden shadow-avatar;
-  }
-
-  // .og-owner__image
-
-  &__image {
-    @apply w-full h-full;
-  }
-
-  // .og-owner__name
-
-  &__name {
-    @apply text-background text-4xl font-bold;
-    span {
-      @apply font-normal;
-    }
-  }
-}
-</style>

@@ -14,7 +14,7 @@ const { public: publicEnv } = useRuntimeConfig()
 
 <template>
   <div
-    :style="{ backgroundColor: publicEnv.sitePrimaryColor }"
+    :style="{ backgroundColor: publicEnv.sitePrimaryColor ?? '#ff9638' }"
     class="relative w-full p-6"
   >
     <div

@@ -11,7 +11,7 @@ const { public: publicEnv } = useRuntimeConfig()
 
 <template>
   <div
-    :style="{ backgroundColor: publicEnv.sitePrimaryColor }"
+    :style="{ backgroundColor: publicEnv.sitePrimaryColor ?? '#ff9638' }"
     class="relative w-full"
   >
     <div class="h-full p-14">
@@ -34,7 +34,7 @@ const { public: publicEnv } = useRuntimeConfig()
         </h1>
         <div class="flex flex-col">
           <div
-            class="flex h-20 w-20 overflow-hidden border-4 border-white border-solid rounded-full shadow-avatar"
+            class="flex h-24 w-24 overflow-hidden border-4 border-white border-solid rounded-full shadow-avatar"
           >
             <NuxtImg
               class="w-full h-full"
@@ -43,7 +43,7 @@ const { public: publicEnv } = useRuntimeConfig()
               height="80"
             />
           </div>
-          <h3 class="text-4xl font-bold text-white">
+          <h3 class="text-4xl font-bold text-white my-2.5">
             {{ publicEnv.ownerName }}
             <span class="pl-1.5 font-normal">{{
               publicEnv.ownerLastName
