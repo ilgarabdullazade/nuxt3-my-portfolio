@@ -7,21 +7,20 @@ defineProps({
     type: String,
     default: 'Set a description to change me.',
   },
-  background: {
-    type: String,
-    default: 'white',
-  },
 })
 
 const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>
-  <div :style="{ background }" class="w-full relative p-6">
+  <div
+    :style="{ backgroundColor: publicEnv.sitePrimaryColor }"
+    class="w-full relative p-6"
+  >
     <div class="bg-white rounded-30 h-full flex items-center justify-center">
-      <div class="flex items-center gap-12 py-10 px-24">
+      <div class="flex items-center py-10 px-24">
         <div
-          class="h-64 shrink-0 aspect-square border-[1rem] rounded-full border-solid border-white overflow-hidden shadow-xl"
+          class="h-64 mr-12 shrink-0 aspect-square border-[1rem] rounded-full border-solid border-white overflow-hidden shadow-xl"
         >
           <NuxtImg
             class="w-full h-full"

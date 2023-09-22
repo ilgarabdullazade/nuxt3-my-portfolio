@@ -33,7 +33,7 @@ const MyTheme = {
   },
 }
 
-export default <Config>{
+export default <Partial<Config>>{
   content: [],
   theme: {
     extend: {

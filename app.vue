@@ -1,10 +1,5 @@
 <script lang="ts" setup>
 import type { SeoInfo } from './types'
-import resolveConfig from 'tailwindcss/resolveConfig'
-import tailwindConfig from './tailwind.config'
-
-const fullConfig = resolveConfig(tailwindConfig)
-const colors = fullConfig.theme?.colors as { [key: string]: string }
 
 const { finalizePendingLocaleChange } = useI18n()
 
@@ -17,7 +12,7 @@ const { data: seoInfo } = await useMyFetch<SeoInfo>(ApiEndpoints.GET_SEO)
 
 useSeoMeta({
   title: `${publicEnv.siteName}`,
-  author: `${publicEnv.siteName}`,
+  author: `${publicEnv.ownerName} ${publicEnv.ownerLastName}`,
   description: seoInfo.value?.meta_description,
   keywords: seoInfo.value?.meta_keywords,
   ogType: 'website',
@@ -27,7 +22,6 @@ useSeoMeta({
 defineOgImage({
   component: 'Main',
   description: seoInfo.value?.meta_description,
-  background: colors.primary[400],
 })
 </script>
 

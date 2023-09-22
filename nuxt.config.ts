@@ -98,6 +98,7 @@ export default defineNuxtConfig({
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL ?? '',
       siteName: process.env.NUXT_PUBLIC_SITE_NAME ?? '',
+      sitePrimaryColor: process.env.NUXT_PUBLIC_SITE_PRIMARY_COLOR ?? '',
       apiBase: process.env.NUXT_PUBLIC_API_BASE ?? '',
       iconLetter: process.env.NUXT_PUBLIC_ICON_LETTER ?? '',
       ownerName: process.env.NUXT_PUBLIC_OWNER_NAME ?? '',
