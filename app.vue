@@ -1,5 +1,10 @@
 <script lang="ts" setup>
 import type { SeoInfo } from './types'
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from './tailwind.config'
+
+const fullConfig = resolveConfig(tailwindConfig)
+const colors = fullConfig.theme?.colors as { [key: string]: string }
 
 const { finalizePendingLocaleChange } = useI18n()
 
@@ -22,7 +27,7 @@ useSeoMeta({
 defineOgImage({
   component: 'Main',
   description: seoInfo.value?.meta_description,
-  backgroundColor: 'bg-primary',
+  backgroundColor: colors.primary[500],
 })
 </script>
 

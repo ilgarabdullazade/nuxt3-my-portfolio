@@ -12,11 +12,11 @@ const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>
-  <div :class="[backgroundColor]" class="w-full relative p-6">
+  <div :style="{ backgroundColor }" class="w-full relative p-6">
     <div class="bg-white rounded-30 h-full flex items-center justify-center">
       <div class="flex items-center gap-12 py-10 px-24">
         <div
-          class="h-64 shrink-0 aspect-square border-[1rem] rounded-full border-solid bg-white overflow-hidden shadow-xl"
+          class="h-64 shrink-0 aspect-square border-[1rem] rounded-full border-solid border-white overflow-hidden shadow-xl"
         >
           <NuxtImg
             class="w-full h-full"
