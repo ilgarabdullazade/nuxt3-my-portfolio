@@ -3,13 +3,13 @@
 const TTL = 3600
 
 export default defineNuxtConfig({
+  routeRules: {
+    '/': { swr: TTL },
+    '/portfolio': { swr: TTL },
+    '/portfolio/**': { swr: TTL },
+    '/contact': { swr: TTL },
+  },
   app: {
-    routeRules: {
-      '/': { swr: TTL },
-      '/portfolio': { swr: TTL },
-      '/portfolio/**': { swr: TTL },
-      '/contact': { swr: TTL },
-    },
     layoutTransition: { name: 'slide', mode: 'out-in' },
     head: {
       templateParams: '%pageTitle %separator %siteName',
