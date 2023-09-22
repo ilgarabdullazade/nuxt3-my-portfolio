@@ -105,9 +105,9 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    domains: [process.env.NUXT_PUBLIC_API_BASE?.replace('https://', '') ?? ''],
+    domains: [process.env.NUXT_IMAGE_DOMAIN ?? ''],
     alias: {
-      unsplash: process.env.NUXT_PUBLIC_API_BASE ?? '',
+      unsplash: `https://${process.env.NUXT_IMAGE_DOMAIN}`,
     },
   },
 })
