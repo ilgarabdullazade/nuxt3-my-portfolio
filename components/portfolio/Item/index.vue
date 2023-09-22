@@ -24,11 +24,12 @@ const { project } = defineProps<Props>()
 
         <NuxtLink
           :to="localePath(`/portfolio/${project.slug}`)"
+          :aria-label="`Read more about ${project.title}`"
           class="portfolio-item__link"
         ></NuxtLink>
       </div>
 
-      <h3 class="portfolio-item__name">{{ project.title }}</h3>
+      <strong class="portfolio-item__name">{{ project.title }}</strong>
       <div v-if="project.tag.length" class="portfolio-item__taglist">
         <span
           v-for="tag in project.tag"
