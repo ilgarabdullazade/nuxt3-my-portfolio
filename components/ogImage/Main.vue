@@ -12,7 +12,7 @@ const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>
-  <div :class="[backgroundColor]" class="w-full relativep-6">
+  <div :class="[backgroundColor]" class="w-full relative p-6">
     <div class="bg-white rounded-30 h-full flex items-center justify-center">
       <div class="flex items-center gap-12 py-10 px-24">
         <div
