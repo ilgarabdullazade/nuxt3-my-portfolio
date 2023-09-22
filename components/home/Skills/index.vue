@@ -35,21 +35,21 @@ const onSwiperInit = (swiper: any) => {
           :slides-per-view="3"
           :slides-per-group="3"
           :space-between="10"
+          :autoplay="{
+            delay: 2000,
+          }"
           :pagination="{
             el: '.skills__pagination',
             clickable: true,
           }"
           :breakpoints="{
             '480': {
-              slidesPerGroup: 4,
               slidesPerView: 4,
             },
             '768': {
-              slidesPerGroup: 6,
               slidesPerView: 6,
             },
             '1024': {
-              slidesPerGroup: 8,
               slidesPerView: 8,
             },
           }"

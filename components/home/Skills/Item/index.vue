@@ -45,6 +45,9 @@ const { skill } = defineProps<Props>()
 
   &__image {
     @apply select-none flex w-16 aspect-square mx-auto;
+    > img {
+      @apply w-full;
+    }
   }
 }
 </style>
