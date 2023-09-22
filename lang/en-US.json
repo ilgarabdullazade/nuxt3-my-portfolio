@@ -30,7 +30,8 @@
     "description": "Description",
     "technology": "Technology",
     "not_found_title": "No Projects Found",
-    "not_found_caption": "Unfortunately, we couldn't find any projects at the moment. Please check back later."
+    "not_found_caption": "Unfortunately, we couldn't find any projects at the moment. Please check back later.",
+    "images_not_found": "No images found"
   },
   "contact": {
     "subtitle": "Get in Touch",

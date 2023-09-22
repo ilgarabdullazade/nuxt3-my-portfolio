@@ -30,7 +30,8 @@
     "description": "Təsvir",
     "technology": "Texnologiya",
     "not_found_title": "Mövcud layihələr yoxdur",
-    "not_found_caption": "Təəssüf ki, hazırda mövcud layihələrimiz yoxdur. Xahiş edirik daha sonra qayıdasınız."
+    "not_found_caption": "Təəssüf ki, hazırda mövcud layihələrimiz yoxdur. Xahiş edirik daha sonra qayıdasınız.",
+    "images_not_found": "Şəkillər tapılmadı"
   },
   "contact": {
     "subtitle": "Əlaqə saxlayın",
