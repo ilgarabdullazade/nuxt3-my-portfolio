@@ -5,7 +5,7 @@ defineOptions({
 defineProps({
   description: {
     type: String,
-    default: 'Set a description to change me.',
+    default: '',
   },
 })
 
@@ -15,14 +15,14 @@ const { public: publicEnv } = useRuntimeConfig()
 <template>
   <div
     :style="{ backgroundColor: publicEnv.sitePrimaryColor }"
-    class="w-full relative p-6"
+    class="relative w-full p-6"
   >
     <div
       class="bg-white rounded-[2rem] h-full flex items-center justify-center"
     >
-      <div class="flex items-center py-10 px-24">
+      <div class="flex flex-col items-center px-24 py-10">
         <div
-          class="h-64 mr-12 shrink-0 aspect-square border-[1rem] rounded-full border-solid border-white overflow-hidden shadow-xl"
+          class="flex h-72 w-72 shrink-0 border-[1rem] rounded-full border-solid border-white overflow-hidden shadow-xl"
         >
           <NuxtImg
             class="w-full h-full"
@@ -31,12 +31,12 @@ const { public: publicEnv } = useRuntimeConfig()
             height="256"
           />
         </div>
-        <div class="flex flex-col gap-4">
-          <div class="text-6xl font-bold">
+        <div class="flex flex-col text-center items-center justify-center">
+          <h1 class="text-6xl">
             {{ publicEnv.ownerName }}
-            <span class="font-normal">{{ publicEnv.ownerLastName }}</span>
-          </div>
-          <div class="text-2xl text-gray-400">
+            <span class="font-normal pl-2">{{ publicEnv.ownerLastName }}</span>
+          </h1>
+          <div class="text-2xl text-gray-500">
             {{ description }}
           </div>
         </div>
@@ -44,9 +44,3 @@ const { public: publicEnv } = useRuntimeConfig()
     </div>
   </div>
 </template>
-
-<style scoped>
-* {
-  box-sizing: border-box;
-}
-</style>

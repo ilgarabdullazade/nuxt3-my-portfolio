@@ -10,125 +10,47 @@ const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>
-  <div :style="{ backgroundColor: publicEnv.sitePrimaryColor }" class="og-page">
-    <div class="og-page__wrapper">
-      <div class="og-page__circles">
-        <div class="og-page__circle og-page__circle--big">
-          <div class="og-page__circle og-page__circle--medium">
-            <div class="og-page__circle og-page__circle--small"></div>
+  <div
+    :style="{ backgroundColor: publicEnv.sitePrimaryColor }"
+    class="relative w-full"
+  >
+    <div class="h-full p-14">
+      <div class="absolute left-1/2 h-[1030px] w-[1030px] bottom-0">
+        <div
+          class="absolute flex items-center justify-center border-4 border-white border-solid rounded-full h-full w-full"
+        >
+          <div
+            class="absolute flex items-center justify-center border-4 border-white border-solid rounded-full h-[790px] w-[790px]"
+          >
+            <div
+              class="absolute flex items-center justify-center border-4 border-white border-solid rounded-full h-[550px] w-[550px]"
+            ></div>
           </div>
         </div>
       </div>
-      <div class="og-page__context">
-        <h1 class="og-page__title">
+      <div class="flex flex-col justify-between w-1/2 h-full">
+        <h1 class="my-4 text-white text-7xl">
           {{ title }}
         </h1>
-
-        <div class="og-page__caption og-owner">
-          <div class="og-owner__wrapper">
-            <div class="og-owner__avatar">
-              <NuxtImg
-                class="og-owner__image"
-                :src="`${publicEnv.apiBase}${ApiEndpoints.FREELANCER_AVATAR}`"
-                width="80"
-                height="80"
-              />
-            </div>
-            <div class="og-owner__name">
-              {{ publicEnv.ownerName }}
-              <span>{{ publicEnv.ownerLastName }}</span>
-            </div>
+        <div class="flex flex-col">
+          <div
+            class="flex h-20 w-20 overflow-hidden border-4 border-white border-solid rounded-full shadow-avatar"
+          >
+            <NuxtImg
+              class="w-full h-full"
+              :src="`${publicEnv.apiBase}${ApiEndpoints.FREELANCER_AVATAR}`"
+              width="80"
+              height="80"
+            />
           </div>
+          <h3 class="text-4xl font-bold text-white">
+            {{ publicEnv.ownerName }}
+            <span class="pl-1.5 font-normal">{{
+              publicEnv.ownerLastName
+            }}</span>
+          </h3>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-* {
-  @apply box-border;
-}
-.og-page {
-  @apply relative w-full;
-  // .og-page__wrapper
-
-  &__wrapper {
-    @apply h-full p-14;
-  }
-
-  // .og-page__circles
-
-  &__circles {
-    @apply absolute left-1/2 w-[1030px] aspect-square bottom-0;
-  }
-
-  // .og-page__circle
-
-  &__circle {
-    @apply absolute flex items-center justify-center border-4 border-white border-solid rounded-full aspect-square;
-  }
-
-  // .og-page__circle--big
-
-  &__circle--big {
-    @apply w-[1030px];
-  }
-
-  // .og-page__circle--medium
-
-  &__circle--medium {
-    @apply w-[790px];
-  }
-
-  // .og-page__circle--small
-
-  &__circle--small {
-    @apply w-[550px];
-  }
-
-  // .og-page__context
-
-  &__context {
-    @apply flex flex-col justify-between w-1/2 h-full;
-  }
-  // .og-page__title
-
-  &__title {
-    @apply my-4 text-white text-7xl;
-  }
-
-  // .og-page__caption
-
-  &__caption {
-  }
-}
-.og-owner {
-  // .og-owner__wrapper
-
-  &__wrapper {
-    @apply flex items-center gap-5;
-  }
-
-  // .og-owner__avatar
-
-  &__avatar {
-    @apply h-20 overflow-hidden border-4 border-white border-solid rounded-full aspect-square shadow-avatar;
-  }
-
-  // .og-owner__image
-
-  &__image {
-    @apply w-full h-full;
-  }
-
-  // .og-owner__name
-
-  &__name {
-    @apply text-4xl font-bold text-white;
-    span {
-      @apply font-normal;
-    }
-  }
-}
-</style>
