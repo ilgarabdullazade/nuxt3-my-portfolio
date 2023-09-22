@@ -9,7 +9,9 @@ const { technologies } = defineProps<Props>()
 
 <template>
   <div v-if="technologies.length" class="project-technology">
-    <h3 class="project-technology__title">{{ $t('portfolio.technology') }}</h3>
+    <strong class="project-technology__title">{{
+      $t('portfolio.technology')
+    }}</strong>
     <ul class="project-technology__list">
       <li
         v-for="technology in technologies"
