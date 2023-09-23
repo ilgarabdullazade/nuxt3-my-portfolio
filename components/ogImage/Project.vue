@@ -24,6 +24,7 @@ const { ogImage } = useSiteConfig()
           class="h-[640px] w-[660px] object-cover"
           :src="`${publicEnv.apiBase}/${image}`"
           height="640"
+          width="660"
         />
       </div>
       <div class="flex flex-col justify-between w-1/2 h-full">
