@@ -1,13 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
-const TTL = 3600
-
 export default defineNuxtConfig({
-  routeRules: {
-    '/': { swr: TTL },
-    '/portfolio': { swr: TTL },
-    '/portfolio/**': { swr: TTL },
-    '/contact': { swr: TTL },
+  nitro: {
+    compressPublicAssets: true,
   },
   app: {
     layoutTransition: { name: 'slide', mode: 'out-in' },
