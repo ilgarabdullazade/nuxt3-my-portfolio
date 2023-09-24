@@ -10,6 +10,12 @@ const { public: publicEnv } = useRuntimeConfig()
 
 const { data: seoInfo } = await useMyFetch<SeoInfo>(ApiEndpoints.GET_SEO)
 
+const { locale } = useI18n()
+
+const language = useCookie('language')
+
+language.value = locale.value
+
 useSeoMeta({
   author: `${publicEnv.ownerName} ${publicEnv.ownerLastName}`,
   description: seoInfo.value?.meta_description,

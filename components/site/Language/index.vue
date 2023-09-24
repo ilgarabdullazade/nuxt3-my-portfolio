@@ -10,11 +10,12 @@ const showDropdown = ref(false)
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value
 }
+
+const language = useCookie('language')
+
 const changeLanguage = (code: string) => {
-  if (process.client) {
-    localStorage.setItem('language', code)
-  }
   setLocale(code)
+  language.value = code
   showDropdown.value = false
 }
 
