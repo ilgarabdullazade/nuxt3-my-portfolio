@@ -1,6 +1,29 @@
-# Nuxt 3 Minimal Starter
+[![abdullazadeilqar.com](https://ilgarabdullazade.com/__og_image__/og.png)](https://abdullazadeilqar.com)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+My personal website, created using Nuxt 3, serves as a valuable reference for best Nuxt coding practices, SEO optimization, performance enhancement, and ensuring accessibility for all users.
+
+# ilgarabdullazade.com
+
+---
+
+**Back-End Source Code**: https://github.com/cmdtorch/portfolio_api
+
+---
+
+### Features
+
+- 💨 [Tailwind CSS v3](https://tailwindcss.com/)
+- 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
+- 🔎 [Nuxt Seo](https://nuxtseo.com/)
+- 🔔 [Nuxt Icon](https://icones.js.org/)
+- 🌐 [Nuxt i18n](https://v8.i18n.nuxtjs.org/)
+- 🖼️ [Nuxt Image](https://image.nuxt.com/)
+- 🗛 [Nuxt Google Fonts](https://image.nuxt.com/)
+  and etc.
+
+### Performance
+
+![Performance](https://img001.prntscr.com/file/img001/GEYadSrVQTmWjMGkKejaKg.png)
 
 ## Setup
 
