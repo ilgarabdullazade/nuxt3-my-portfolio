@@ -26,10 +26,15 @@ const { education } = defineProps<Props>()
 
 <style lang="scss" scoped>
 .education-item {
+  &:first-child {
+    .education-item__wrapper {
+      @apply pt-0;
+    }
+  }
   // .education-item__wrapper
 
   &__wrapper {
-    @apply relative pl-10 pb-8 border-b-2 border-solid border-dark-50;
+    @apply relative pl-10 py-8 border-b-2 border-solid border-dark-50;
     @apply before:absolute before:bottom-0 before:left-4 before:h-full before:w-0.5 before:bg-dark-50;
   }
 
