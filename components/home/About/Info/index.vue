@@ -22,6 +22,7 @@ const { info } = defineProps<Props>()
           :grab-cursor="true"
           :autoplay="{
             delay: 3000,
+            disableOnInteraction: false,
           }"
         >
           <SwiperSlide v-for="profession in info.profession" :key="profession">

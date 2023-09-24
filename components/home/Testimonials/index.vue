@@ -36,6 +36,10 @@ const onSwiperInit = (swiper: any) => {
           class="testimonials__swiper"
           :modules="[SwiperAutoplay, SwiperPagination]"
           :slides-per-view="1"
+          :autoplay="{
+            delay: 4000,
+            disableOnInteraction: false,
+          }"
           :pagination="{
             el: '.testimonials__pagination',
             clickable: true,

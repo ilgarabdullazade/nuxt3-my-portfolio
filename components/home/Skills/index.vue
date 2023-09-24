@@ -37,6 +37,7 @@ const onSwiperInit = (swiper: any) => {
           :space-between="10"
           :autoplay="{
             delay: 2000,
+            disableOnInteraction: false,
           }"
           :pagination="{
             el: '.skills__pagination',
