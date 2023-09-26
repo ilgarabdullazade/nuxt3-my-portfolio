@@ -1,4 +1,4 @@
-[![abdullazadeilqar.com](https://ilgarabdullazade.com/__og_image__/og.png)](https://abdullazadeilqar.com)
+[![ilgarabdullazade.com](https://ilgarabdullazade.com/__og_image__/og.png)](https://ilgarabdullazade.com)
 
 My personal website, created using Nuxt 3, serves as a valuable reference for best Nuxt coding practices, SEO optimization, performance enhancement, and ensuring accessibility for all users.
 
