@@ -17,7 +17,7 @@ const aboutData: AboutInfo = {
 <template>
   <section class="about">
     <div class="about__wrapper">
-      <HomeAboutAvatar :avatar="userData?.avatar" class="about__avatar" />
+      <HomeAboutAvatar :avatar="userData!.avatar" class="about__avatar" />
       <HomeAboutInfo :info="aboutData" class="about__info" />
     </div>
   </section>
@@ -28,7 +28,7 @@ const aboutData: AboutInfo = {
   // .about__wrapper
 
   &__wrapper {
-    @apply lg:grid lg:grid-cols-12 lg:gap-7 my-4 lg:max-w-4xl lg:mx-auto;
+    @apply items-center lg:grid lg:grid-cols-12 lg:gap-7 my-4 lg:max-w-4xl lg:mx-auto;
   }
 
   // .about__avatar
