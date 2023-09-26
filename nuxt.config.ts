@@ -113,5 +113,6 @@ export default defineNuxtConfig({
     alias: {
       unsplash: `https://${process.env.NUXT_IMAGE_DOMAIN}`,
     },
+    format: ['avif', 'webp'],
   },
 })

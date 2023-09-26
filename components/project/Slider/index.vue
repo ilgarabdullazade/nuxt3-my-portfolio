@@ -48,7 +48,7 @@ const onSwiperInit = (swiper: any) => {
         :src="`${publicEnv.apiBase}/${item.image}`"
         :alt="title"
         :title="title"
-        sizes="450px lg:735px xl:660px 2xl:830px"
+        sizes="700px lg:1100px xl:900px 2xl:1280px"
         placeholder
       />
     </SwiperSlide>
