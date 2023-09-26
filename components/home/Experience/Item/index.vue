@@ -14,7 +14,7 @@ const { experience } = defineProps<Props>()
       <div class="experience-item__content">
         <div class="experience-item__info">
           <h3 class="experience-item__position">{{ experience.title }}</h3>
-          <p class="experience-item__description">>{{ experience.text }}</p>
+          <p class="experience-item__description">{{ experience.text }}</p>
         </div>
         <div class="experience-item__company">
           <h4 class="experience-item__company--name">
@@ -30,7 +30,7 @@ const { experience } = defineProps<Props>()
           :src="`${publicEnv.apiBase}/${experience.image}`"
           :alt="experience.title"
           fit="contain"
-          width="40"
+          width="80"
         />
       </div>
     </div>
@@ -84,7 +84,7 @@ const { experience } = defineProps<Props>()
   // .experience-item__company
 
   &__company {
-    @apply bg-dark-50 py-6 px-4 max-sm:py-4 max-sm:px-3 sm:w-36 shrink-0 flex flex-col justify-center items-center text-center;
+    @apply bg-dark-50 py-6 px-4 max-sm:py-4 max-sm:px-3 sm:min-w-[9rem] shrink-0 flex flex-col justify-center items-center text-center;
   }
 
   // .experience-item__company--name
