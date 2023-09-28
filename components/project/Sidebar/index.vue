@@ -8,7 +8,7 @@ const { project } = defineProps<Props>()
 
 const dayjs = useDayjs()
 
-const date = dayjs(`${project.created_date}`).format('MM/DD/YYYY')
+const date = dayjs(`${project.created_date}`).format('DD/MM/YYYY')
 
 const { locale } = useI18n()
 </script>
