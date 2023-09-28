@@ -75,6 +75,7 @@ const { locale } = useI18n()
   // .project-sidebar__title
 
   &__title {
+    @apply text-lg;
   }
 
   // .project-sidebar__information

@@ -29,7 +29,7 @@ const { technologies } = defineProps<Props>()
   // .project-technology__title
 
   &__title {
-    @apply mb-3;
+    @apply mb-3 inline-block text-lg;
   }
 
   // .project-technology__list
