@@ -26,11 +26,11 @@ const { experience } = defineProps<Props>()
         </div>
       </div>
       <div class="experience-item__icon">
-        <NuxtImg
+        <NuxtPicture
           :src="`${publicEnv.apiBase}/${experience.image}`"
           :alt="experience.title"
           fit="contain"
-          width="80"
+          width="40"
         />
       </div>
     </div>

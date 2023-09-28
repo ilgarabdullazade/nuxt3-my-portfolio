@@ -14,14 +14,13 @@ const { project } = defineProps<Props>()
   <div class="portfolio-item">
     <div class="portfolio-item__wrapper">
       <div class="portfolio-item__frame">
-        <NuxtImg
+        <NuxtPicture
           class="portfolio-item__img"
           :src="`${publicEnv.apiBase}/${project.preview_image}`"
           :alt="project.title"
           :title="project.title"
           :width="560"
         />
-
         <NuxtLink
           :to="localePath(`/portfolio/${project.slug}`)"
           :aria-label="`Read more about ${project.title}`"

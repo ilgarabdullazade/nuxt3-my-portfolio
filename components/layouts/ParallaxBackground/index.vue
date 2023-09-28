@@ -5,7 +5,15 @@ const { parallaxStyle } = useParallaxBackground()
 
 const img = useImage()
 const backgroundImageStyles = computed(() => {
-  const imgUrl = img(mainBg, { width: 2560, height: 1440 })
+  const imgUrl = img(
+    mainBg,
+    { width: 2560, height: 1440 },
+    {
+      modifiers: {
+        format: 'webp',
+      },
+    }
+  )
   return {
     backgroundImage: `url(${imgUrl})`,
   }

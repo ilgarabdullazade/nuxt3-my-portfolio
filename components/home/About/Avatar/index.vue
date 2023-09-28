@@ -11,10 +11,18 @@ const { parallaxStyle } = useParallaxBackground()
 
 const img = useImage()
 const backgroundImageStyles = computed(() => {
-  const imgUrl = img(`${publicEnv.apiBase}/${avatar}`, {
-    width: 600,
-    height: 600,
-  })
+  const imgUrl = img(
+    `${publicEnv.apiBase}/${avatar}`,
+    {
+      width: 600,
+      height: 600,
+    },
+    {
+      modifiers: {
+        format: 'webp',
+      },
+    }
+  )
   return {
     backgroundImage: `url(${imgUrl})`,
   }

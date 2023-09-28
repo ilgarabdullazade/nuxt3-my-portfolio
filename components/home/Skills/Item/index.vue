@@ -25,6 +25,7 @@ const { skill } = defineProps<Props>()
             :src="`${publicEnv.apiBase}/${skill.logo}`"
             :alt="skill.name"
             fit="contain"
+            format="webp"
             height="128"
           />
         </div>

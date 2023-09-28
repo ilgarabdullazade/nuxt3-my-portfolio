@@ -43,7 +43,7 @@ const onSwiperInit = (swiper: any) => {
       v-for="item in gallery"
       :key="item.image"
     >
-      <NuxtImg
+      <NuxtPicture
         class="project-slider__img"
         :src="`${publicEnv.apiBase}/${item.image}`"
         :alt="title"

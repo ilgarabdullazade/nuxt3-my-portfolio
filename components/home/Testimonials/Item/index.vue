@@ -12,7 +12,7 @@ const { testimonial } = defineProps<Props>()
   <div class="testimonial-item">
     <div class="testimonial-item__wrapper">
       <div class="testimonial-item__picture">
-        <NuxtImg
+        <NuxtPicture
           :src="`${publicEnv.apiBase}/${testimonial.image}`"
           :alt="testimonial.full_name"
           width="80"
