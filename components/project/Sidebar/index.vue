@@ -30,7 +30,10 @@ const { locale } = useI18n()
             target="_blank"
             class="project-sidebar__apps--item"
           >
-            <NuxtImg :src="'images/google-play_' + locale + '.png'" />
+            <NuxtImg
+              :src="'images/google-play_' + locale + '.png'"
+              format="webp"
+            />
           </NuxtLink>
           <NuxtLink
             v-if="project.apple_url"
@@ -38,7 +41,10 @@ const { locale } = useI18n()
             target="_blank"
             class="project-sidebar__apps--item"
           >
-            <NuxtImg :src="'images/app-store_' + locale + '.png'" />
+            <NuxtImg
+              :src="'images/app-store_' + locale + '.png'"
+              format="webp"
+            />
           </NuxtLink>
         </div>
         <div v-if="project.site_url" class="project-sidebar__information--item">
