@@ -62,6 +62,8 @@ export interface ProjectThumb {
 
 export interface Project extends ProjectThumb {
   site_url?: string
+  android_url?: string
+  apple_url?: string
   created_date: String
   description: string
   gallery: GalleryImage[]
