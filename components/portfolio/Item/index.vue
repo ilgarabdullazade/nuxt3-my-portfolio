@@ -20,6 +20,7 @@ const { project } = defineProps<Props>()
           :alt="project.title"
           :title="project.title"
           :width="560"
+          placeholder
         />
         <NuxtLink
           :to="localePath(`/portfolio/${project.slug}`)"
