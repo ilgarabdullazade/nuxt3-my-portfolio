@@ -4,12 +4,11 @@ import type { Project } from '~/types'
 interface Props {
   project: Project
 }
-
 const { project } = defineProps<Props>()
 
 const dayjs = useDayjs()
 
-const date = dayjs.default(`${project.created_date}`).format('DD/MM/YYYY')
+const date = dayjs(`${project.created_date}`).format('DD/MM/YYYY')
 
 const { locale } = useI18n()
 </script>
