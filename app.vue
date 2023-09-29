@@ -16,6 +16,11 @@ const language = useCookie('language')
 
 language.value = locale.value
 
+const i18nHead = useLocaleHead({
+  addDirAttribute: true,
+  addSeoAttributes: true,
+})
+
 useSeoMeta({
   author: `${publicEnv.ownerName} ${publicEnv.ownerLastName}`,
   description: seoInfo.value?.meta_description,
@@ -31,20 +36,22 @@ defineOgImage({
 </script>
 
 <template>
-  <Body>
-    <div class="app">
-      <LayoutsParallaxBackground class="app__parallax" />
-      <NuxtLayout class="app__layout">
-        <NuxtPage
-          :transition="{
-            name: 'fade',
-            mode: 'out-in',
-            onBeforeEnter,
-          }"
-        />
-      </NuxtLayout>
-    </div>
-  </Body>
+  <Html :lang="i18nHead.htmlAttrs!.lang" :dir="i18nHead.htmlAttrs!.dir">
+    <Body>
+      <div class="app">
+        <LayoutsParallaxBackground class="app__parallax" />
+        <NuxtLayout class="app__layout">
+          <NuxtPage
+            :transition="{
+              name: 'fade',
+              mode: 'out-in',
+              onBeforeEnter,
+            }"
+          />
+        </NuxtLayout>
+      </div>
+    </Body>
+  </Html>
 </template>
 
 <style lang="scss" scoped>

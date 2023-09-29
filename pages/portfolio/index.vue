@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+const { t } = useI18n()
+
 useSeoMeta({
-  title: 'Portfolio',
+  title: t('navigation.portfolio'),
 })
 
 defineOgImage({

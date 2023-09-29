@@ -36,7 +36,6 @@ export default defineNuxtConfig({
     url: process.env.NUXT_PUBLIC_SITE_URL ?? '',
     name: process.env.NUXT_PUBLIC_SITE_NAME ?? '',
     ogImage: process.env.NUXT_PUBLIC_META_OG_IMAGE ?? '',
-    defaultLocale: 'en',
   },
   ogImage: {
     fonts: ['Raleway:700', 'Raleway:400'],
@@ -69,6 +68,7 @@ export default defineNuxtConfig({
     display: 'swap',
   },
   i18n: {
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL ?? '',
     skipSettingLocaleOnNavigate: true,
     locales: [
       {
