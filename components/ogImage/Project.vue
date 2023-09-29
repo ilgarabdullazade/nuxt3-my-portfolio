@@ -18,14 +18,9 @@ const { ogImage } = useSiteConfig()
   >
     <div class="h-full p-14">
       <div
-        class="absolute left-1/2 w-[1030px] h-[1030px] bottom-0 border-4 border-solid rounded-full border-white flex items-end overflow-hidden"
+        class="absolute left-[55%] w-[1030px] h-[1030px] bottom-0 border-4 border-solid rounded-full border-white flex items-end overflow-hidden"
       >
-        <NuxtImg
-          class="h-[640px] w-[660px] object-cover"
-          :src="`${publicEnv.apiBase}/${image}`"
-          height="640"
-          width="660"
-        />
+        <NuxtImg :src="`${publicEnv.apiBase}/${image}`" height="640" />
       </div>
       <div class="flex flex-col justify-between w-1/2 h-full">
         <h1 class="my-4 text-white text-7xl">
