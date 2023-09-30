@@ -19,7 +19,7 @@ const { project } = defineProps<Props>()
           :src="`${publicEnv.apiBase}/${project.preview_image}`"
           :alt="project.title"
           :title="project.title"
-          sizes="sm:320px lg:580px xl:360px"
+          sizes="sm:585px lg:480px xl:360px"
         />
         <NuxtLink
           :to="localePath(`/portfolio/${project.slug}`)"
