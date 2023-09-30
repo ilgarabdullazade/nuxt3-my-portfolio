@@ -29,7 +29,7 @@ const { data: projectList } = await useMyFetch<ProjectThumb[]>(
   // .portfolio-grid__wrapper
 
   &__wrapper {
-    @apply grid grid-cols-3 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1;
+    @apply grid grid-cols-3 gap-4 max-lg:grid-cols-2 max-sm:grid-cols-1;
   }
 
   // .portfolio-grid__item
