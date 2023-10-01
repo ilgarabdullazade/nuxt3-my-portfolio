@@ -4,8 +4,6 @@ FROM node:${NODE_VERSION}-slim as base
 
 ARG PORT=3000
 
-RUN npm install -g yarn 
-
 WORKDIR /app
 
 COPY package.json .
