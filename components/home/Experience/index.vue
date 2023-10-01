@@ -15,7 +15,7 @@ const { data: experiences } = await useMyFetch<Experience[]>(
       <div class="experience__body">
         <HomeExperienceItem
           v-for="experience in experiences"
-          :key="experience.title"
+          :key="experience.period"
           :experience="experience"
           class="experience__item"
         />
