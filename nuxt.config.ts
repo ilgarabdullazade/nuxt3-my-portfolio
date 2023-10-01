@@ -53,6 +53,7 @@ export default defineNuxtConfig({
     '@formkit/nuxt',
     'dayjs-nuxt',
     '@nuxtseo/module',
+    'nuxt-gtag',
   ],
   tailwindcss: {
     cssPath: '~/assets/scss/tailwind.scss',
