@@ -40,7 +40,7 @@ const aboutData: AboutInfo = {
   // .about__info
 
   &__info {
-    @apply lg:col-span-7 self-center lg:pl-5;
+    @apply lg:col-span-7 self-center lg:pl-4;
   }
 }
 </style>
