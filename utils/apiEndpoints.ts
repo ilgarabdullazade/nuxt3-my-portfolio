@@ -14,4 +14,5 @@ export const ApiEndpoints = {
   GET_PROJECT: (slug: string) => `${API_BASE_URL}/project/${slug}/`,
   GET_SEO: `${API_BASE_URL}/seo/`,
   GET_IN_TOUCH: `${API_BASE_URL}/get_in_touch/`,
+  VISIT: `${API_BASE_URL}/visit/`,
 }
