@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { LocaleObject } from '@nuxtjs/i18n/dist/runtime/composables'
+import type { LocaleObject } from 'vue-i18n-routing';
 
 const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 

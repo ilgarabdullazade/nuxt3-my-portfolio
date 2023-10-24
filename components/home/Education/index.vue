@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Occupation } from '~/types'
+import type { Occupation } from '~/types'
 
 const { data: educationList } = await useMyFetch<Occupation[]>(
   ApiEndpoints.EDUCATION
