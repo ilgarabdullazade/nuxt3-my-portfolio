@@ -10,20 +10,11 @@ const { data: testimonials, pending } = await useMyFetch<Testimonial[]>(
   }
 )
 const isMobile = useMediaQuery('not all and (min-width: 1024px)')
-
-const onSwiperInit = (swiper: any) => {
-  const { initDOM } = useAfterOutIn(() => {
-    swiper.pagination.enable()
-  })
-  initDOM()
-}
 </script>
 
 <template>
   <section class="testimonials">
-    <ClientOnly>
-      <SiteSkeletonSection v-if="pending" :items="isMobile ? 1 : 2" />
-    </ClientOnly>
+    <SiteSkeletonSection v-if="pending" :items="2" />
     <div
       v-if="testimonials?.length"
       :class="{ hidden: pending }"
@@ -34,7 +25,6 @@ const onSwiperInit = (swiper: any) => {
       }}</SiteTitle>
       <div class="testimonials__body">
         <Swiper
-          @swiper="onSwiperInit"
           class="testimonials__swiper"
           :modules="[SwiperAutoplay, SwiperPagination]"
           :slides-per-view="1"

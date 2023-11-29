@@ -9,13 +9,6 @@ const { data: skills, pending } = await useMyFetch<Technology[]>(
     lazy: true,
   }
 )
-
-const onSwiperInit = (swiper: any) => {
-  const { initDOM } = useAfterOutIn(() => {
-    swiper.pagination.enable()
-  })
-  initDOM()
-}
 </script>
 
 <template>
@@ -30,7 +23,6 @@ const onSwiperInit = (swiper: any) => {
       <div class="skills__body">
         <Swiper
           class="skills__swiper"
-          @swiper="onSwiperInit"
           :modules="[SwiperAutoplay, SwiperPagination]"
           :slides-per-view="3"
           :slides-per-group="3"
