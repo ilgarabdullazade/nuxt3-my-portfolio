@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { LocaleObject } from 'vue-i18n-routing';
+import type { LocaleObject } from 'vue-i18n-routing'
 
 const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 
@@ -10,6 +10,14 @@ const showDropdown = ref(false)
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value
 }
+
+const pageLoading = ref(true)
+
+const nuxtApp = useNuxtApp()
+
+nuxtApp.hook('page:finish', () => {
+  pageLoading.value = false
+})
 
 const language = useCookie('language')
 
@@ -39,7 +47,8 @@ const availableLocales = computed(() => {
 <template>
   <div class="language">
     <div class="language__dropdown">
-      <button class="language__button" @click="toggleDropdown">
+      <SiteSkeletonItem v-if="pageLoading" class="language__skeleton" />
+      <button v-else class="language__button" @click="toggleDropdown">
         {{
           isMobile
             ? selectedLocale.code.toLocaleUpperCase()
@@ -69,6 +78,12 @@ const availableLocales = computed(() => {
   // .language__dropdown
 
   &__dropdown {
+  }
+
+  // .language__skeleton
+
+  &__skeleton {
+    @apply h-5 w-16 max-lg:w-9;
   }
 
   // .language__button
