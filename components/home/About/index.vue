@@ -44,4 +44,3 @@ const aboutData: AboutInfo = {
   }
 }
 </style>
-~/utils/apiEndpoints ~/utils/apiEndpoints
