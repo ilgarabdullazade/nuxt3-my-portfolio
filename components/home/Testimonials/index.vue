@@ -21,7 +21,9 @@ const onSwiperInit = (swiper: any) => {
 
 <template>
   <section class="testimonials">
-    <SiteSkeletonSection v-if="pending" :items="isMobile ? 1 : 2" />
+    <ClientOnly>
+      <SiteSkeletonSection v-if="pending" :items="isMobile ? 1 : 2" />
+    </ClientOnly>
     <div
       v-if="testimonials?.length"
       :class="{ hidden: pending }"
