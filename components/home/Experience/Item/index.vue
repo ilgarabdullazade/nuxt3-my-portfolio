@@ -30,7 +30,7 @@ const { experience } = defineProps<Props>()
           :src="`${publicEnv.apiBase}/${experience.image}`"
           :alt="experience.title"
           fit="contain"
-          width="40"
+          sizes="54px sm:40px"
         />
       </div>
     </div>
@@ -67,7 +67,7 @@ const { experience } = defineProps<Props>()
   // .experience-item__icon
 
   &__icon {
-    @apply relative z-0 flex rounded-t-xl items-center justify-center p-4 sm:p-5 sm:mr-10 sm:ml-16 bg-primary-400 sm:rounded-full w-full sm:w-20 h-20 sm:aspect-square;
+    @apply relative z-0 flex rounded-t-xl items-center justify-center p-3 sm:p-5 sm:mr-10 sm:ml-16 bg-primary-400 sm:rounded-full w-full sm:w-20 h-20 sm:aspect-square;
     @apply sm:before:absolute sm:before:top-full sm:before:h-screen sm:before:left-1/2 sm:before:w-0.5 sm:before:-translate-x-1/2 sm:before:bg-primary;
     @apply sm:after:absolute sm:after:top-1/2 sm:after:h-0.5 sm:after:right-full sm:after:w-full sm:after:-translate-y-1/2 sm:after:bg-primary;
     img {
