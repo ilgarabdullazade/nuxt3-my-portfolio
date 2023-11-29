@@ -48,7 +48,7 @@ watch(
         </li>
         <li class="navigation__item--divider"></li>
       </ul>
-      <SiteSocial v-if="isMobile" class="navigation__social"></SiteSocial>
+      <SiteSocial v-show="isMobile" class="navigation__social"></SiteSocial>
     </div>
 
     <button
