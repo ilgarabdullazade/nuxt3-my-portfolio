@@ -1,7 +1,5 @@
 <script setup lang="ts">
-const { error } = defineProps({
-  error: Object,
-})
+defineProps({ error: { type: Object, default: null } });
 
 const handleError = () => clearError({ redirect: '/' })
 </script>
@@ -33,12 +31,12 @@ const handleError = () => clearError({ redirect: '/' })
   // .error-page__wrapper
 
   &__wrapper {
-    @apply mt-20 mb-32 flex justify-center flex-col items-center;
+    @apply mb-32 mt-20 flex flex-col items-center justify-center;
   }
   // .error-page__title
 
   &__title {
-    @apply text-dark-300 text-[10rem] leading-snug mb-2;
+    @apply mb-2 text-[10rem] leading-snug text-dark-300;
   }
 
   // .error-page__subtitle

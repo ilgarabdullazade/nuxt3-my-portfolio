@@ -17,7 +17,7 @@ const userScroll = () => {
 }
 
 onMounted(() => {
-  if (process.client) {
+  if (import.meta.client) {
     window.addEventListener('scroll', userScroll)
   }
 })
@@ -40,7 +40,7 @@ onBeforeUnmount(() => {
 
 <style lang="scss" scoped>
 .scroll-to-top {
-  @apply flex items-center justify-center fixed bottom-4 right-3 z-50 bg-dark-50 w-12 h-12 pb-1 text-center text-2xl border border-solid border-dark-100 lg:hover:text-primary rounded-lg transition-all shadow-sm invisible opacity-0;
+  @apply invisible fixed bottom-4 right-3 z-50 flex h-12 w-12 items-center justify-center rounded-lg border border-solid border-dark-100 bg-dark-50 pb-1 text-center text-2xl opacity-0 shadow-sm transition-all lg:hover:text-primary;
   &.show {
     @apply visible opacity-100;
   }

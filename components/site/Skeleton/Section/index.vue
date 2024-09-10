@@ -13,7 +13,7 @@ const { items, itemHeight } = withDefaults(defineProps<Props>(), {
 <template>
   <div class="skeleton">
     <div class="skeleton__wrapper">
-      <SiteSkeletonItem class="skeleton__title"></SiteSkeletonItem>
+      <SiteSkeletonItem class="skeleton__title"/>
       <div class="skeleton__body" :class="[`grid-cols-${items}`]">
         <SiteSkeletonItem
           v-for="i in items"
@@ -35,7 +35,7 @@ const { items, itemHeight } = withDefaults(defineProps<Props>(), {
   // .skeleton__title
 
   &__title {
-    @apply h-9 w-40  mb-7;
+    @apply mb-7 h-9 w-40;
   }
 
   // .skeleton__body

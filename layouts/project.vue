@@ -10,7 +10,7 @@
 
 <style lang="scss" scoped>
 .project-layout {
-  @apply bg-background h-full min-h-screen;
+  @apply h-full min-h-screen bg-background;
   // .project-layout__container
 
   &__container {
@@ -20,7 +20,7 @@
   // .project-layout__main
 
   &__main {
-    @apply pt-6 pb-14;
+    @apply pb-14 pt-6;
   }
 }
 </style>

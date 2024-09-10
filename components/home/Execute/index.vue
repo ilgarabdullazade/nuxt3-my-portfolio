@@ -41,7 +41,7 @@ const { data: executes } = await useMyFetch<WhatIDO[]>(ApiEndpoints.WHAT_I_DO)
   // .execute__body
 
   &__body {
-    @apply grid grid-cols-2 max-sm:grid-cols-1 gap-7;
+    @apply grid grid-cols-2 gap-7 max-sm:grid-cols-1;
   }
 
   // .execute__item

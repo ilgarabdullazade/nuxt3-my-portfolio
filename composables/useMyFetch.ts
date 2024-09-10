@@ -6,7 +6,7 @@ export function useMyFetch<T>(url: string, options: UseFetchOptions<T> = {}) {
   const language = useCookie('language')
   const { locale } = useI18n()
   const langCode = ref<string>(
-    process.server ? locale.value : language.value ?? 'en'
+    import.meta.server ? locale.value : (language.value ?? 'en'),
   )
 
   const defaults: UseFetchOptions<T> = {

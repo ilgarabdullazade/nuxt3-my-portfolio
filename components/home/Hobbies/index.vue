@@ -36,7 +36,7 @@ const { data: hobbies } = await useMyFetch<Hobby[]>(ApiEndpoints.HOBBIES)
   // .hobbies__body
 
   &__body {
-    @apply grid grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2 gap-7 max-sm:gap-5;
+    @apply grid grid-cols-4 gap-7 max-lg:grid-cols-3 max-sm:grid-cols-2 max-sm:gap-5;
   }
 
   // .hobbies__item

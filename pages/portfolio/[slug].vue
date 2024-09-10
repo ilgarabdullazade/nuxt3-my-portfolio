@@ -8,11 +8,10 @@ const localePath = useLocalePath()
 const route = useRoute()
 
 const { data: project } = await useMyFetch<Project>(
-  ApiEndpoints.GET_PROJECT(route.params.slug as string)
+  ApiEndpoints.GET_PROJECT(route.params.slug as string),
 )
 
-defineOgImage({
-  component: 'Project',
+defineOgImageComponent('Project', {
   title: project.value?.title,
   image: project!.value?.preview_image,
 })
@@ -60,7 +59,7 @@ defineOgImage({
   // .project__header
 
   &__header {
-    @apply flex flex-col gap-1 mb-12 max-lg:mb-8;
+    @apply mb-12 flex flex-col gap-1 max-lg:mb-8;
   }
 
   // .project__title
@@ -77,7 +76,7 @@ defineOgImage({
   // .project__close-btn
 
   &__close-btn {
-    @apply flex items-center justify-center bg-dark-50 w-12 h-12 pb-1 text-center text-2xl border border-solid border-dark-100 lg:hover:text-primary rounded-lg transition-colors max-lg:w-10 max-lg:h-10 max-lg:text-xl max-lg:rounded-md;
+    @apply flex h-12 w-12 items-center justify-center rounded-lg border border-solid border-dark-100 bg-dark-50 pb-1 text-center text-2xl transition-colors max-lg:h-10 max-lg:w-10 max-lg:rounded-md max-lg:text-xl lg:hover:text-primary;
   }
 
   // .project__body
@@ -93,13 +92,13 @@ defineOgImage({
   }
 
   &__content--empty {
-    @apply rounded-2xl border-2 border-dashed border-dark-100 w-full h-full p-10 flex items-center justify-center text-xl font-semibold aspect-video;
+    @apply flex aspect-video h-full w-full items-center justify-center rounded-2xl border-2 border-dashed border-dark-100 p-10 text-xl font-semibold;
   }
 
   // .project__sidebar
 
   &__sidebar {
-    @apply lg:col-span-2 xl:ml-14 lg:ml-8;
+    @apply lg:col-span-2 lg:ml-8 xl:ml-14;
   }
 }
 </style>

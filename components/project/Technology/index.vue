@@ -41,7 +41,7 @@ const { technologies } = defineProps<Props>()
   // .project-technology__item
 
   &__item {
-    @apply py-1 px-2 bg-background border-2 border-solid border-dark-100 rounded-md font-medium;
+    @apply rounded-md border-2 border-solid border-dark-100 bg-background px-2 py-1 font-medium;
   }
 }
 </style>

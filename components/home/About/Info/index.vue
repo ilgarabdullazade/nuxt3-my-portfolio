@@ -66,7 +66,7 @@ const { info } = defineProps<Props>()
   // .about-info__position
 
   &__position {
-    @apply text-base font-light text-dark-300 mb-0.5 max-w-full max-lg:mb-1.5;
+    @apply mb-0.5 max-w-full text-base font-light text-dark-300 max-lg:mb-1.5;
   }
 
   // .about-info__title

@@ -5,10 +5,9 @@ useSeoMeta({
   title: t('navigation.portfolio'),
 })
 
-defineOgImage({
-  component: 'Page',
+defineOgImageComponent('Page', {
   title: 'Portfolio',
-})
+}) 
 </script>
 
 <template>

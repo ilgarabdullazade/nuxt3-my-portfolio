@@ -25,7 +25,7 @@ const { project } = defineProps<Props>()
           :to="localePath(`/portfolio/${project.slug}`)"
           :aria-label="`Read more about ${project.title}`"
           class="portfolio-item__link"
-        ></NuxtLink>
+        />
       </div>
 
       <strong class="portfolio-item__name">{{ project.title }}</strong>
@@ -59,43 +59,43 @@ const { project } = defineProps<Props>()
   // .portfolio-item__wrapper
 
   &__wrapper {
-    @apply aspect-video rounded-xl overflow-hidden relative;
+    @apply relative aspect-video overflow-hidden rounded-xl;
   }
 
   // .portfolio-item__frame
 
   &__frame {
-    @apply overflow-hidden before:absolute before:z-10 before:top-0 before:left-0 before:h-full before:w-full  before:transition-colors;
+    @apply overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:transition-colors;
   }
 
   // .portfolio-item__img
 
   &__img {
-    @apply absolute top-1/2 -translate-y-1/2 z-0 transition-transform w-full min-h-full object-cover;
+    @apply absolute top-1/2 z-0 min-h-full w-full -translate-y-1/2 object-cover transition-transform;
   }
 
   // .portfolio-item__link
 
   &__link {
-    @apply absolute top-0 left-0 w-full h-full z-20;
+    @apply absolute left-0 top-0 z-20 h-full w-full;
   }
 
   // .portfolio-item__name
 
   &__name {
-    @apply absolute z-20 text-sm inline-flex py-1 px-2.5 bg-background top-5 left-5 rounded-md;
+    @apply absolute left-5 top-5 z-20 inline-flex rounded-md bg-background px-2.5 py-1 text-sm;
   }
 
   // .portfolio-item__taglist
 
   &__taglist {
-    @apply absolute z-20 flex gap-1 flex-wrap bottom-5 left-5  transition-opacity lg:opacity-0;
+    @apply absolute bottom-5 left-5 z-20 flex flex-wrap gap-1 transition-opacity lg:opacity-0;
   }
 
   // .portfolio-item__tag
 
   &__tag {
-    @apply text-xs inline-flex py-0.5 px-2 bg-background rounded;
+    @apply inline-flex rounded bg-background px-2 py-0.5 text-xs;
   }
 }
 </style>

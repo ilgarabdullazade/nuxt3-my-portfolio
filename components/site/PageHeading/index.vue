@@ -27,7 +27,7 @@ defineProps({
   // .page-heading__wrapper
 
   &__wrapper {
-    @apply relative bg-dark-50 border-y border-solid border-dark-100 py-14 px-16 -mx-16 max-lg:py-10;
+    @apply relative -mx-16 border-y border-solid border-dark-100 bg-dark-50 px-16 py-14 max-lg:py-10;
   }
 
   // .page-heading__title
@@ -38,7 +38,7 @@ defineProps({
   // .page-heading__subtitle
 
   &__subtitle {
-    @apply lg:absolute top-0 right-16 text-dark-400 py-5 max-lg:py-2;
+    @apply right-16 top-0 py-5 text-dark-400 max-lg:py-2 lg:absolute;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 export function useParallaxBackground() {
-  const parallax = reactive(useParallax(process.client ? document.body : null))
+  const parallax = reactive(useParallax(import.meta.client ? document.body : null))
   const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 
   const parallaxStyle = computed(() => {

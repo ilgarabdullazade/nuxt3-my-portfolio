@@ -25,7 +25,7 @@ const { hobby } = defineProps<Props>()
   // .hobby-item__wrapper
 
   &__wrapper {
-    @apply lg:hover:-translate-y-1 lg:hover:shadow-card transition-all rounded-xl flex flex-col justify-center items-center gap-4 p-6 text-center border-2 border-solid border-dark-100;
+    @apply flex flex-col items-center justify-center gap-4 rounded-xl border-2 border-solid border-dark-100 p-6 text-center transition-all lg:hover:-translate-y-1 lg:hover:shadow-card;
   }
 
   // .hobby-item__icon

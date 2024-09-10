@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import type { LocaleObject } from 'vue-i18n-routing'
+
+import type { LocaleObject } from '@nuxtjs/i18n';
 
 const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 
@@ -59,12 +60,12 @@ const availableLocales = computed(() => {
       <Transition name="slide-up" mode="out-in">
         <ul v-show="showDropdown" class="language__menu">
           <li
+            v-for="availableLocale in availableLocales"
+            :key="availableLocale.code"
             class="language__item"
-            v-for="locale in availableLocales"
-            :key="locale.code"
-            @click="changeLanguage(locale.code)"
+            @click="changeLanguage(availableLocale.code)"
           >
-            {{ locale.name }}
+            {{ availableLocale.name }}
           </li>
         </ul>
       </Transition>
@@ -89,18 +90,18 @@ const availableLocales = computed(() => {
   // .language__button
 
   &__button {
-    @apply text-primary font-semibold truncate max-sm:max-w-[5rem];
+    @apply truncate font-semibold text-primary max-sm:max-w-[5rem];
   }
   // .language__menu
 
   &__menu {
-    @apply absolute bg-background left-1/2 -translate-x-1/2 top-full p-4 rounded-lg shadow-header mt-2 w-36 max-lg:left-0;
+    @apply absolute left-1/2 top-full mt-2 w-36 -translate-x-1/2 rounded-lg bg-background p-4 shadow-header max-lg:left-0;
   }
 
   // .language__item
 
   &__item {
-    @apply opacity-50 transition-opacity lg:hover:opacity-100 py-1 text-left w-full cursor-pointer;
+    @apply w-full cursor-pointer py-1 text-left opacity-50 transition-opacity lg:hover:opacity-100;
   }
 }
 
@@ -111,6 +112,6 @@ const availableLocales = computed(() => {
 
 .slide-up-enter-from,
 .slide-up-leave-to {
-  @apply opacity-0 translate-y-5;
+  @apply translate-y-5 opacity-0;
 }
 </style>

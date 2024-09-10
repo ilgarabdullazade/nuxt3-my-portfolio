@@ -26,14 +26,14 @@ const { public: publicEnv } = useRuntimeConfig()
   // .logo__symbol
 
   &__symbol {
-    @apply aspect-square w-11 h-11 bg-primary flex justify-center items-center rounded-full leading-[2.75rem] text-[1.75rem] font-extrabold text-background;
-    @apply max-lg:w-8 max-lg:h-8 max-lg:leading-[2rem] max-lg:text-[1.125rem];
+    @apply flex aspect-square h-11 w-11 items-center justify-center rounded-full bg-primary text-[1.75rem] font-extrabold leading-[2.75rem] text-background;
+    @apply max-lg:h-8 max-lg:w-8 max-lg:text-[1.125rem] max-lg:leading-[2rem];
   }
 
   // .logo__text
 
   &__text {
-    @apply text-dark-950 text-xl font-bold max-lg:leading-[2rem] max-lg:text-[1.125rem];
+    @apply text-xl font-bold text-dark-950 max-lg:text-[1.125rem] max-lg:leading-[2rem];
     span {
       @apply font-normal;
     }

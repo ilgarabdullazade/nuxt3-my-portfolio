@@ -24,12 +24,13 @@ withDefaults(
   defineProps<{
     intent: ButtonProps['intent']
     size?: ButtonProps['size']
-    to?: string
+    to?: string | null
   }>(),
   {
     intent: 'primary',
     size: 'medium',
-  }
+    to: null
+  },
 )
 </script>
 
@@ -44,13 +45,13 @@ withDefaults(
 
 <style lang="scss" scoped>
 .button {
-  @apply inline-block relative font-medium bg-background transition-all shadow-button py-3 rounded-30 border-2 border-solid disabled:opacity-60;
+  @apply relative inline-block rounded-30 border-2 border-solid bg-background py-3 font-medium shadow-button transition-all disabled:opacity-60;
 
   &--primary {
-    @apply border-primary text-dark-950 lg:hover:text-background lg:hover:bg-primary;
+    @apply border-primary text-dark-950 lg:hover:bg-primary lg:hover:text-background;
   }
   &--secondary {
-    @apply shadow-dark-200 border-dark-200 text-dark lg:hover:text-dark-950 lg:hover:bg-dark-200;
+    @apply border-dark-200 text-dark shadow-dark-200 lg:hover:bg-dark-200 lg:hover:text-dark-950;
   }
   &--small {
     @apply px-4 py-1.5;

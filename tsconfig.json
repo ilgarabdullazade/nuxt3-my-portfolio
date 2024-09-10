@@ -3,9 +3,6 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "strict": true,
-    "types": [
-      "@nuxtjs/tailwindcss",
-      "@nuxtjs/i18n",
-    ]
+    "types": ["@nuxtjs/tailwindcss", "@nuxtjs/i18n"]
   }
 }

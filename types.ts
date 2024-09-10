@@ -9,8 +9,7 @@ export interface UserData {
   cv: string
 }
 
-export interface AboutInfo
-  extends Pick<UserData, 'full_name' | 'about' | 'profession' | 'cv'> {}
+export type AboutInfo = Pick<UserData, 'full_name' | 'about' | 'profession' | 'cv'>
 
 export interface WhatIDO {
   icon: string
@@ -64,7 +63,7 @@ export interface Project extends ProjectThumb {
   site_url?: string
   android_url?: string
   apple_url?: string
-  created_date: String
+  created_date: string
   description: string
   gallery: GalleryImage[]
 }

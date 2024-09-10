@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
   },
+
   app: {
     layoutTransition: { name: 'slide', mode: 'out-in' },
     head: {
@@ -32,16 +33,24 @@ export default defineNuxtConfig({
       },
     ],
   },
+
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL ?? '',
     name: process.env.NUXT_PUBLIC_SITE_NAME ?? '',
     ogImage: process.env.NUXT_PUBLIC_META_OG_IMAGE ?? '',
   },
+
   ogImage: {
+    componentOptions: {
+      global: true,
+    },
     fonts: ['Raleway:700', 'Raleway:400'],
   },
+
   devtools: { enabled: false },
+
   modules: [
+    '@nuxt/eslint',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     '@nuxt/image',
@@ -52,13 +61,16 @@ export default defineNuxtConfig({
     'floating-vue/nuxt',
     '@formkit/nuxt',
     'dayjs-nuxt',
-    '@nuxtseo/module',
     'nuxt-gtag',
+    'nuxt-og-image',
   ],
+
   tailwindcss: {
     cssPath: '~/assets/scss/tailwind.scss',
   },
+
   css: ['~/assets/scss/app.scss'],
+
   googleFonts: {
     families: {
       Raleway: {
@@ -68,36 +80,20 @@ export default defineNuxtConfig({
     },
     display: 'swap',
   },
+
   i18n: {
-    baseUrl: process.env.NUXT_PUBLIC_SITE_URL ?? '',
-    skipSettingLocaleOnNavigate: true,
-    locales: [
-      {
-        code: 'en',
-        iso: 'en-US',
-        file: 'en-US.json',
-        name: 'English',
-      },
-      {
-        code: 'az',
-        iso: 'az-AZ',
-        file: 'az-AZ.json',
-        name: 'Azərbaycanca',
-      },
-      {
-        code: 'ru',
-        iso: 'ru-RU',
-        file: 'ru-RU.json',
-        name: 'Русский',
-      },
-    ],
-    lazy: true,
-    langDir: 'lang',
-    defaultLocale: 'en',
+    vueI18n: './i18n/i18n.config.ts',
+    detectBrowserLanguage: {
+      alwaysRedirect: true,
+      fallbackLocale: 'en-US',
+      redirectOn: 'root',
+    },
   },
+
   swiper: {
     styleLang: 'scss',
   },
+
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL ?? '',
@@ -109,10 +105,13 @@ export default defineNuxtConfig({
       ownerLastName: process.env.NUXT_PUBLIC_OWNER_LAST_NAME ?? '',
     },
   },
+
   image: {
     domains: [process.env.NUXT_IMAGE_DOMAIN ?? ''],
     alias: {
       unsplash: `https://${process.env.NUXT_IMAGE_DOMAIN}`,
     },
   },
+
+  compatibilityDate: '2024-09-11',
 })

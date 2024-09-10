@@ -6,11 +6,11 @@
   }
 
   &-label {
-    @apply inline-flex text-base font-semibold mb-0.5;
+    @apply mb-0.5 inline-flex text-base font-semibold;
   }
 
   &-input {
-    @apply resize-none h-full rounded-md text-base border-2 border-solid border-dark-200 py-2.5 px-4 w-full outline-none;
+    @apply h-full w-full resize-none rounded-md border-2 border-solid border-dark-200 px-4 py-2.5 text-base outline-none;
   }
 
   &-messages {

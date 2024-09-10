@@ -7,7 +7,7 @@ const { data: skills, pending } = await useMyFetch<Technology[]>(
   {
     server: false,
     lazy: true,
-  }
+  },
 )
 </script>
 
@@ -48,16 +48,16 @@ const { data: skills, pending } = await useMyFetch<Technology[]>(
           }"
         >
           <SwiperSlide
-            class="skills__slide"
             v-for="skill in skills"
             :key="skill.name"
+            class="skills__slide"
           >
             <HomeSkillsItem :skill="skill" class="skills__item" />
           </SwiperSlide>
         </Swiper>
         <div
           class="skills__pagination swiper-pagination swiper-pagination-line"
-        ></div>
+        />
       </div>
     </div>
   </section>

@@ -2,7 +2,7 @@
 import type { ProjectThumb } from '~/types'
 
 const { data: projectList } = await useMyFetch<ProjectThumb[]>(
-  ApiEndpoints.PROJECTS_LIST
+  ApiEndpoints.PROJECTS_LIST,
 )
 </script>
 

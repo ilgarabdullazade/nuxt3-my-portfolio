@@ -54,19 +54,19 @@ const { testimonial } = defineProps<Props>()
   // .testimonial-item__content
 
   &__content {
-    @apply relative rounded-lg border-2 border-solid bg-background border-dark-100 pt-7 pl-14 pb-5 pr-5;
+    @apply relative rounded-lg border-2 border-solid border-dark-100 bg-background pb-5 pl-14 pr-5 pt-7;
   }
 
   // .testimonial-item__picture
 
   &__picture {
-    @apply rounded-full overflow-hidden w-20 h-20 aspect-square absolute left-0 top-0 z-10 max-lg:w-16 max-lg:h-16;
+    @apply absolute left-0 top-0 z-10 aspect-square h-20 w-20 overflow-hidden rounded-full max-lg:h-16 max-lg:w-16;
   }
 
   // .testimonial-item__text
 
   &__text {
-    @apply italic mb-2.5;
+    @apply mb-2.5 italic;
   }
 
   // .testimonial-item__author
@@ -90,13 +90,13 @@ const { testimonial } = defineProps<Props>()
   // .testimonial-item__icon-small
 
   &__icon-small {
-    @apply text-dark-100 text-2xl left-5 bottom-10 absolute;
+    @apply absolute bottom-10 left-5 text-2xl text-dark-100;
   }
 
   // .testimonial-item__icon-big
 
   &__icon-big {
-    @apply text-dark-50 absolute text-5xl -bottom-6 -right-6 -z-10;
+    @apply absolute -bottom-6 -right-6 -z-10 text-5xl text-dark-50;
   }
 }
 </style>

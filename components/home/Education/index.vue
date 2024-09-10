@@ -2,7 +2,7 @@
 import type { Occupation } from '~/types'
 
 const { data: educationList } = await useMyFetch<Occupation[]>(
-  ApiEndpoints.EDUCATION
+  ApiEndpoints.EDUCATION,
 )
 </script>
 

@@ -28,7 +28,7 @@ const headers = useRequestHeaders([
   'user-agent',
 ])
 
-if (process.server) {
+if (import.meta.server) {
   await useMyFetch(ApiEndpoints.VISIT, {
     method: 'POST',
     params: {
@@ -48,8 +48,7 @@ useSeoMeta({
   ogDescription: seoInfo.value?.meta_description,
 })
 
-defineOgImage({
-  component: 'Main',
+defineOgImageComponent('Main', {
   description: seoInfo.value?.meta_description,
 })
 </script>
@@ -103,6 +102,6 @@ defineOgImage({
 
 .slide-enter-from,
 .slide-leave-to {
-  @apply opacity-0 -translate-x-1/2;
+  @apply -translate-x-1/2 opacity-0;
 }
 </style>

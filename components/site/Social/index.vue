@@ -27,7 +27,7 @@ const { data: socials } = await useMyFetch<Social[]>(ApiEndpoints.SOCIAL_LINKS)
   // .social__list
 
   &__list {
-    @apply flex items-center justify-center flex-wrap gap-1;
+    @apply flex flex-wrap items-center justify-center gap-1;
   }
 
   // .social__item
@@ -39,7 +39,7 @@ const { data: socials } = await useMyFetch<Social[]>(ApiEndpoints.SOCIAL_LINKS)
   // .social__link
 
   &__link {
-    @apply flex justify-center transition-transform items-center rounded-full w-7 h-7 aspect-square bg-primary-500 text-background text-lg lg:hover:scale-110;
+    @apply flex aspect-square h-7 w-7 items-center justify-center rounded-full bg-primary-500 text-lg text-background transition-transform lg:hover:scale-110;
   }
 }
 </style>

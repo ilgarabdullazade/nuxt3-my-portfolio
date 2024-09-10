@@ -12,7 +12,7 @@
 
 <style scoped lang="scss">
 .footer {
-  @apply flex justify-between max-lg:flex-col max-lg:gap-3 items-center gap-10 border-t-2 border-dark-100 py-4 -mx-16 max-lg:-mx-10 px-16 max-lg:px-10;
+  @apply -mx-16 flex items-center justify-between gap-10 border-t-2 border-dark-100 px-16 py-4 max-lg:-mx-10 max-lg:flex-col max-lg:gap-3 max-lg:px-10;
   // .footer__social
 
   &__social {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Experience } from '~/types';
+import type { Experience } from '~/types'
 
 const { data: experiences } = await useMyFetch<Experience[]>(
   ApiEndpoints.EXPERIENCE,
