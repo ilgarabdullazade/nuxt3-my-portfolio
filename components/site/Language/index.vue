@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-
-import type { LocaleObject } from '@nuxtjs/i18n';
+import type { LocaleObject } from '@nuxtjs/i18n'
 
 const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 
@@ -52,8 +51,8 @@ const availableLocales = computed(() => {
       <button v-else class="language__button" @click="toggleDropdown">
         {{
           isMobile
-            ? selectedLocale.code.toLocaleUpperCase()
-            : selectedLocale.name
+            ? selectedLocale?.code?.toLocaleUpperCase()
+            : selectedLocale?.name
         }}
         <Icon name="fa6-solid:angle-down" />
       </button>

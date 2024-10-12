@@ -13,7 +13,7 @@ const { data: project } = await useMyFetch<Project>(
 
 defineOgImageComponent('Project', {
   title: project.value?.title,
-  image: project!.value?.preview_image,
+  image: project.value?.preview_image,
 })
 </script>
 

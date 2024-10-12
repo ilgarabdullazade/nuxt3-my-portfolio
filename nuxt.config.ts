@@ -41,9 +41,6 @@ export default defineNuxtConfig({
   },
 
   ogImage: {
-    componentOptions: {
-      global: true,
-    },
     fonts: ['Raleway:700', 'Raleway:400'],
   },
 
@@ -112,6 +109,5 @@ export default defineNuxtConfig({
       unsplash: `https://${process.env.NUXT_IMAGE_DOMAIN}`,
     },
   },
-
-  compatibilityDate: '2024-09-11',
+  
 })
