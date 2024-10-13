@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="skeleton-block"/>
+  <div class="skeleton-block" />
 </template>
 
 <style lang="scss" scoped>

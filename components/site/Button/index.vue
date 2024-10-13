@@ -29,7 +29,7 @@ withDefaults(
   {
     intent: 'primary',
     size: 'medium',
-    to: null
+    to: null,
   },
 )
 </script>

@@ -13,7 +13,7 @@ const toggleMenu = () => {
 watch(
   () => showMenu.value,
   (newValue) => {
-    if(newValue) {
+    if (newValue) {
       document.body.classList.add('overflow-hidden')
     } else {
       document.body.classList.remove('overflow-hidden')
@@ -48,9 +48,9 @@ watch(
             $t('navigation.contact')
           }}</NuxtLink>
         </li>
-        <li class="navigation__item--divider"/>
+        <li class="navigation__item--divider" />
       </ul>
-      <SiteSocial v-show="isMobile" class="navigation__social"/>
+      <SiteSocial v-show="isMobile" class="navigation__social" />
     </div>
 
     <button
@@ -62,9 +62,9 @@ watch(
         class="navigation-burger__wrapper"
         :class="{ 'menu-open': showMenu }"
       >
-        <span/>
-        <span/>
-        <span/>
+        <span />
+        <span />
+        <span />
       </div>
     </button>
   </div>

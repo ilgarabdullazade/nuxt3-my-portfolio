@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
-import tailwindScrollbar from 'tailwind-scrollbar';
+import tailwindScrollbar from 'tailwind-scrollbar'
 
 const MyTheme = {
   colors: {

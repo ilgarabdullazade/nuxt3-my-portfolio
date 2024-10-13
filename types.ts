@@ -9,7 +9,10 @@ export interface UserData {
   cv: string
 }
 
-export type AboutInfo = Pick<UserData, 'full_name' | 'about' | 'profession' | 'cv'>
+export type AboutInfo = Pick<
+  UserData,
+  'full_name' | 'about' | 'profession' | 'cv'
+>
 
 export interface WhatIDO {
   icon: string

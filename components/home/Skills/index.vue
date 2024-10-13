@@ -2,7 +2,7 @@
 import type { Technology } from '~/types'
 import { ApiEndpoints } from '~/utils/apiEndpoints'
 
-const { data: skills, pending } = await useMyFetch<Technology[]>(
+const { data: skills, status } = await useMyFetch<Technology[]>(
   ApiEndpoints.TECHNOLOGIES,
   {
     server: false,
@@ -13,10 +13,10 @@ const { data: skills, pending } = await useMyFetch<Technology[]>(
 
 <template>
   <section v class="skills">
-    <SiteSkeletonSection v-if="pending" :items="1" item-height="h-20" />
+    <SiteSkeletonSection v-if="status.pending" :items="1" item-height="h-20" />
     <div
       v-if="skills?.length"
-      :class="{ hidden: pending }"
+      :class="{ hidden: status.pending }"
       class="skills__wrapper"
     >
       <SiteTitle class="skills__title">{{ $t('skills.title') }}</SiteTitle>

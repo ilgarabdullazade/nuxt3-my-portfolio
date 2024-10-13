@@ -4,16 +4,13 @@ interface Props {
   itemHeight?: string
 }
 
-const { items, itemHeight } = withDefaults(defineProps<Props>(), {
-  items: 2,
-  itemHeight: 'h-36',
-})
+const { items = 2, itemHeight = 'h-36' } = defineProps<Props>()
 </script>
 
 <template>
   <div class="skeleton">
     <div class="skeleton__wrapper">
-      <SiteSkeletonItem class="skeleton__title"/>
+      <SiteSkeletonItem class="skeleton__title" />
       <div class="skeleton__body" :class="[`grid-cols-${items}`]">
         <SiteSkeletonItem
           v-for="i in items"

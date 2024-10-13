@@ -7,7 +7,7 @@ useSeoMeta({
 
 defineOgImageComponent('Page', {
   title: 'Portfolio',
-}) 
+})
 </script>
 
 <template>
