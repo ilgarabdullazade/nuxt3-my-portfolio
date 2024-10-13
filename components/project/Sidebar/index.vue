@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import type { Project } from '~/types'
+import type { Project } from '@/types'
 
 interface Props {
   project: Project
 }
+
 const { project } = defineProps<Props>()
 
 const dayjs = useDayjs()
@@ -75,7 +76,7 @@ const { locale } = useI18n()
   // .project-sidebar__wrapper
 
   &__wrapper {
-    @apply py-6 px-9 rounded-2xl border-2 border-solid border-dark-100 flex flex-col gap-4;
+    @apply flex flex-col gap-4 rounded-2xl border-2 border-solid border-dark-100 px-9 py-6;
   }
 
   // .project-sidebar__title
@@ -95,7 +96,7 @@ const { locale } = useI18n()
   &__information--item {
     @apply flex items-center gap-2;
     > a {
-      @apply text-primary truncate;
+      @apply truncate text-primary;
     }
     > svg {
       @apply text-primary;
@@ -111,7 +112,7 @@ const { locale } = useI18n()
   // .project-sidebar__apps--item
 
   &__apps--item {
-    @apply lg:hover:scale-110 lg:transition-transform h-10 flex;
+    @apply flex h-10 lg:transition-transform lg:hover:scale-110;
   }
 
   // .project-sidebar__description

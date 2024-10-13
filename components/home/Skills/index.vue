@@ -1,24 +1,24 @@
 <script setup lang="ts">
-import type { Technology } from '~/types'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import type { Technology } from '@/types'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
-const { data: skills, pending } = await useMyFetch<Technology[]>(
+const { data: skills, status } = await useMyFetch<Technology[]>(
   ApiEndpoints.TECHNOLOGIES,
   {
     server: false,
     lazy: true,
-  }
+  },
 )
 </script>
 
 <template>
   <section v class="skills">
-    <SiteSkeletonSection v-if="pending" :items="1" item-height="h-20" />
-    <div
-      v-if="skills?.length"
-      :class="{ hidden: pending }"
-      class="skills__wrapper"
-    >
+    <SiteSkeletonSection
+      v-show="status === 'pending'"
+      :items="1"
+      item-height="h-20"
+    />
+    <div v-show="skills?.length" class="skills__wrapper">
       <SiteTitle class="skills__title">{{ $t('skills.title') }}</SiteTitle>
       <div class="skills__body">
         <Swiper
@@ -48,16 +48,16 @@ const { data: skills, pending } = await useMyFetch<Technology[]>(
           }"
         >
           <SwiperSlide
-            class="skills__slide"
-            v-for="skill in skills"
+            v-for="skill of skills"
             :key="skill.name"
+            class="skills__slide"
           >
             <HomeSkillsItem :skill="skill" class="skills__item" />
           </SwiperSlide>
         </Swiper>
         <div
           class="skills__pagination swiper-pagination swiper-pagination-line"
-        ></div>
+        />
       </div>
     </div>
   </section>
@@ -103,4 +103,4 @@ const { data: skills, pending } = await useMyFetch<Technology[]>(
   }
 }
 </style>
-~/utils/apiEndpoints
+@/utils/apiEndpoints

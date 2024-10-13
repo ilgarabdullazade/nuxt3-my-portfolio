@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { ProjectThumb } from '~/types'
+import type { ProjectThumb } from '@/types'
 
 const { data: projectList } = await useMyFetch<ProjectThumb[]>(
-  ApiEndpoints.PROJECTS_LIST
+  ApiEndpoints.PROJECTS_LIST,
 )
 </script>
 
@@ -10,7 +10,7 @@ const { data: projectList } = await useMyFetch<ProjectThumb[]>(
   <section v-if="projectList?.length" class="portfolio-grid">
     <div class="portfolio-grid__wrapper">
       <PortfolioItem
-        v-for="project in projectList"
+        v-for="project of projectList"
         :key="project.title"
         :project="project"
         class="portfolio-grid__item"

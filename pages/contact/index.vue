@@ -5,8 +5,7 @@ useSeoMeta({
   title: t('navigation.contact'),
 })
 
-defineOgImage({
-  component: 'Page',
+defineOgImageComponent('Page', {
   title: 'Contact',
 })
 </script>
@@ -43,7 +42,7 @@ defineOgImage({
   // .contact__body
 
   &__body {
-    @apply flex gap-10 mb-16 max-lg:flex-col;
+    @apply mb-16 flex gap-10 max-lg:flex-col;
   }
 
   // .contact__info

@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-import type { Technology } from '~/types'
-const isMobile = useMediaQuery('not all and (min-width: 1024px)')
-const { public: publicEnv } = useRuntimeConfig()
-
+import type { Technology } from '@/types'
 interface Props {
   skill: Technology
 }
 const { skill } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
+
+const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 </script>
 
 <template>
@@ -45,7 +46,7 @@ const { skill } = defineProps<Props>()
   // .skill-item__image
 
   &__image {
-    @apply select-none flex w-16 aspect-square mx-auto;
+    @apply mx-auto flex aspect-square w-16 select-none;
     > img {
       @apply w-full;
     }

@@ -9,7 +9,7 @@
   h4,
   h5,
   h6 {
-    @apply text-dark-900 font-bold;
+    @apply font-bold text-dark-900;
   }
   h1 {
     @apply text-5xl leading-tight max-lg:text-4xl;

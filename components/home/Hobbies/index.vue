@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Hobby } from '~/types'
+import type { Hobby } from '@/types'
 
 const { data: hobbies } = await useMyFetch<Hobby[]>(ApiEndpoints.HOBBIES)
 </script>
@@ -10,7 +10,7 @@ const { data: hobbies } = await useMyFetch<Hobby[]>(ApiEndpoints.HOBBIES)
       <SiteTitle class="hobbies__title">{{ $t('hobbies.title') }}</SiteTitle>
       <div class="hobbies__body">
         <HomeHobbiesItem
-          v-for="hobby in hobbies"
+          v-for="hobby of hobbies"
           :key="hobby.icon"
           :hobby="hobby"
           class="hobbies__item"
@@ -36,7 +36,7 @@ const { data: hobbies } = await useMyFetch<Hobby[]>(ApiEndpoints.HOBBIES)
   // .hobbies__body
 
   &__body {
-    @apply grid grid-cols-4 max-lg:grid-cols-3 max-sm:grid-cols-2 gap-7 max-sm:gap-5;
+    @apply grid grid-cols-4 gap-7 max-lg:grid-cols-3 max-sm:grid-cols-2 max-sm:gap-5;
   }
 
   // .hobbies__item

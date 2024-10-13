@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { WhatIDO } from '~/types'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import type { WhatIDO } from '@/types'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
 const { data: executes } = await useMyFetch<WhatIDO[]>(ApiEndpoints.WHAT_I_DO)
 </script>
@@ -14,7 +14,7 @@ const { data: executes } = await useMyFetch<WhatIDO[]>(ApiEndpoints.WHAT_I_DO)
         }}</SiteTitle>
         <div class="execute__body">
           <HomeExecuteItem
-            v-for="execute in executes"
+            v-for="execute of executes"
             :key="execute.title"
             :execute="execute"
             class="execute__item"
@@ -41,7 +41,7 @@ const { data: executes } = await useMyFetch<WhatIDO[]>(ApiEndpoints.WHAT_I_DO)
   // .execute__body
 
   &__body {
-    @apply grid grid-cols-2 max-sm:grid-cols-1 gap-7;
+    @apply grid grid-cols-2 gap-7 max-sm:grid-cols-1;
   }
 
   // .execute__item
@@ -50,4 +50,4 @@ const { data: executes } = await useMyFetch<WhatIDO[]>(ApiEndpoints.WHAT_I_DO)
   }
 }
 </style>
-~/utils/apiEndpoints
+@/utils/apiEndpoints

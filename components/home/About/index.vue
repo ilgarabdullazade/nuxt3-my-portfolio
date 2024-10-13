@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import type { UserData, AboutInfo } from '~/types'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import type { UserData, AboutInfo } from '@/types'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
 const { data: userData } = await useMyFetch<UserData>(
-  ApiEndpoints.FREELANCER_INFO
+  ApiEndpoints.FREELANCER_INFO,
 )
 
 const aboutData: AboutInfo = {
@@ -17,7 +17,7 @@ const aboutData: AboutInfo = {
 <template>
   <section class="about">
     <div class="about__wrapper">
-      <HomeAboutAvatar :avatar="userData!.avatar" class="about__avatar" />
+      <HomeAboutAvatar :avatar="userData?.avatar" class="about__avatar" />
       <HomeAboutInfo :info="aboutData" class="about__info" />
     </div>
   </section>
@@ -28,19 +28,19 @@ const aboutData: AboutInfo = {
   // .about__wrapper
 
   &__wrapper {
-    @apply items-center lg:grid lg:grid-cols-12 lg:gap-7 my-4 lg:max-w-4xl lg:mx-auto;
+    @apply my-4 items-center lg:mx-auto lg:grid lg:max-w-4xl lg:grid-cols-12 lg:gap-7;
   }
 
   // .about__avatar
 
   &__avatar {
-    @apply lg:col-span-5 p-3 max-lg:max-w-sm max-lg:mx-auto max-lg:mb-5;
+    @apply p-3 max-lg:mx-auto max-lg:mb-5 max-lg:max-w-sm lg:col-span-5;
   }
 
   // .about__info
 
   &__info {
-    @apply lg:col-span-7 self-center lg:pl-4;
+    @apply self-center lg:col-span-7 lg:pl-4;
   }
 }
 </style>

@@ -1,25 +1,20 @@
 <script lang="ts" setup>
-import type { Testimonial } from '~/types'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import type { Testimonial } from '@/types'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
-const { data: testimonials, pending } = await useMyFetch<Testimonial[]>(
+const { data: testimonials, status } = await useMyFetch<Testimonial[]>(
   ApiEndpoints.TESTIMONIALS,
   {
     server: false,
     lazy: true,
-  }
+  },
 )
-const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 </script>
 
 <template>
   <section class="testimonials">
-    <SiteSkeletonSection v-if="pending" :items="2" />
-    <div
-      v-if="testimonials?.length"
-      :class="{ hidden: pending }"
-      class="testimonials__wrapper"
-    >
+    <SiteSkeletonSection v-show="status === 'pending'" />
+    <div v-show="testimonials?.length" class="testimonials__wrapper">
       <SiteTitle class="testimonials__title">{{
         $t('testimonials.title')
       }}</SiteTitle>
@@ -44,9 +39,9 @@ const isMobile = useMediaQuery('not all and (min-width: 1024px)')
           }"
         >
           <SwiperSlide
-            class="testimonials__slide"
-            v-for="testimonial in testimonials"
+            v-for="testimonial of testimonials"
             :key="testimonial.full_name"
+            class="testimonials__slide"
           >
             <HomeTestimonialsItem
               :testimonial="testimonial"
@@ -56,7 +51,7 @@ const isMobile = useMediaQuery('not all and (min-width: 1024px)')
         </Swiper>
         <div
           class="testimonials__pagination swiper-pagination swiper-pagination-line"
-        ></div>
+        />
       </div>
     </div>
   </section>
@@ -109,7 +104,7 @@ const isMobile = useMediaQuery('not all and (min-width: 1024px)')
 
 .slide-up-enter-from,
 .slide-up-leave-to {
-  @apply opacity-0 translate-y-5;
+  @apply translate-y-5 opacity-0;
 }
 </style>
-~/utils/apiEndpoints
+@/utils/apiEndpoints

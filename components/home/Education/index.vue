@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import type { Occupation } from '~/types'
+import type { Occupation } from '@/types'
 
 const { data: educationList } = await useMyFetch<Occupation[]>(
-  ApiEndpoints.EDUCATION
+  ApiEndpoints.EDUCATION,
 )
 </script>
 
@@ -14,7 +14,7 @@ const { data: educationList } = await useMyFetch<Occupation[]>(
       }}</SiteTitle>
       <div class="education__body">
         <HomeEducationItem
-          v-for="education in educationList"
+          v-for="education of educationList"
           :key="education.title"
           :education="education"
           class="education__item"

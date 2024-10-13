@@ -1,9 +1,9 @@
 html {
-  @apply relative w-full h-full min-h-full scroll-smooth;
+  @apply relative h-full min-h-full w-full scroll-smooth;
 }
 
 body {
-  @apply scrollbar-thumb-primary-300 scrollbar-thin scrollbar-track-background min-w-[360px] text-sm text-dark font-normal w-full min-h-full bg-primary max-lg:bg-background bg-repeat bg-fixed overflow-y-auto overflow-x-hidden;
+  @apply min-h-full w-full min-w-[360px] overflow-y-auto overflow-x-hidden bg-primary bg-fixed bg-repeat text-sm font-normal text-dark scrollbar-thin scrollbar-track-background scrollbar-thumb-primary-300 max-lg:bg-background;
 }
 
 img {

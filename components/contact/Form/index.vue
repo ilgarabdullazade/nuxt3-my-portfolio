@@ -2,7 +2,7 @@
 import type { PluginConfigs } from '@formkit/vue'
 import type { FormKitNode } from '@formkit/core'
 import { reset } from '@formkit/core'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
 const submitted = ref(false)
 
@@ -19,7 +19,7 @@ const config = inject<PluginConfigs>(Symbol.for('FormKitConfig'))
 const { locale } = useI18n()
 
 const setFormLocale = () => {
-  if (config) config!.locale = locale.value
+  if (config) config.locale = locale.value
 }
 onMounted(() => {
   setFormLocale()
@@ -27,19 +27,19 @@ onMounted(() => {
 
 watch(
   () => locale.value,
-  () => setFormLocale()
+  () => setFormLocale(),
 )
 </script>
 
 <template>
   <div class="contact-form">
     <FormKit
+      id="contactForm"
       class="contact-form__form"
       type="form"
-      id="contactForm"
+      :actions="false"
       @submit="submitHandler"
       @input="submitted = false"
-      :actions="false"
     >
       <div class="contact-form__wrapper">
         <SiteTitle class="contact-form__title">{{
@@ -94,7 +94,7 @@ watch(
         >
       </div>
     </FormKit>
-    <div class="contact-form__alert" v-if="submitted">
+    <div v-if="submitted" class="contact-form__alert">
       {{ $t('contact.success') }}
     </div>
   </div>
@@ -120,13 +120,13 @@ watch(
   // .contact-form__body
 
   &__body {
-    @apply flex gap-5 mb-7 max-sm:flex-col max-sm:gap-2;
+    @apply mb-7 flex gap-5 max-sm:flex-col max-sm:gap-2;
   }
 
   // .contact-form__inputs
 
   &__inputs {
-    @apply flex-1 flex flex-col gap-1.5 max-sm:gap-2;
+    @apply flex flex-1 flex-col gap-1.5 max-sm:gap-2;
   }
 
   // .contact-form__textarea
@@ -151,7 +151,7 @@ watch(
   // .contact-form__alert
 
   &__alert {
-    @apply text-green-500 mt-2;
+    @apply mt-2 text-green-500;
   }
 }
 </style>

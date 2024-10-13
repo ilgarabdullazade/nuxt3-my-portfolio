@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Occupation } from '~/types'
+import type { Occupation } from '@/types'
 
 interface Props {
   education: Occupation
@@ -34,14 +34,14 @@ const { education } = defineProps<Props>()
   // .education-item__wrapper
 
   &__wrapper {
-    @apply relative pl-10 py-8 border-b-2 border-solid border-dark-50;
+    @apply relative border-b-2 border-solid border-dark-50 py-8 pl-10;
     @apply before:absolute before:bottom-0 before:left-4 before:h-full before:w-0.5 before:bg-dark-50;
   }
 
   // .education-item__header
 
   &__header {
-    @apply relative flex gap-2 items-center mb-4;
+    @apply relative mb-4 flex items-center gap-2;
   }
 
   // .education-item__period

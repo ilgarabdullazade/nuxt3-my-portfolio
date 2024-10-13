@@ -1,11 +1,12 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-
 interface Props {
   title: string
   caption: string
 }
+
 const { title, caption } = defineProps<Props>()
+
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -29,7 +30,7 @@ const { title, caption } = defineProps<Props>()
   // .empty-block__wrapper
 
   &__wrapper {
-    @apply pt-20 pb-36 flex flex-col items-center justify-center text-center gap-5 max-w-xl mx-auto max-lg:gap-3 max-lg:pt-24 max-lg:pb-32;
+    @apply mx-auto flex max-w-xl flex-col items-center justify-center gap-5 pb-36 pt-20 text-center max-lg:gap-3 max-lg:pb-32 max-lg:pt-24;
   }
 
   // .empty-block__title

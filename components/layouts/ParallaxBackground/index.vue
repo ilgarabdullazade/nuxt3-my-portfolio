@@ -12,7 +12,7 @@ const backgroundImageStyles = computed(() => {
       modifiers: {
         format: 'webp',
       },
-    }
+    },
   )
   return {
     backgroundImage: `url(${imgUrl})`,
@@ -21,14 +21,16 @@ const backgroundImageStyles = computed(() => {
 </script>
 
 <template>
-  <div
-    class="parallax-background"
-    :style="{ ...parallaxStyle, ...backgroundImageStyles }"
-  ></div>
+  <ClientOnly>
+    <div
+      class="parallax-background"
+      :style="{ ...parallaxStyle, ...backgroundImageStyles }"
+    />
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>
 .parallax-background {
-  @apply fixed w-auto h-auto -top-5 -left-5 -right-5 -bottom-5 transition-all duration-0 bg-cover bg-no-repeat -z-10;
+  @apply fixed -bottom-5 -left-5 -right-5 -top-5 -z-10 h-auto w-auto bg-cover bg-no-repeat transition-all duration-0;
 }
 </style>

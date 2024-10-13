@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
+import tailwindScrollbar from 'tailwind-scrollbar'
 
 const MyTheme = {
   colors: {
@@ -84,5 +85,5 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [require('tailwind-scrollbar')],
+  plugins: [tailwindScrollbar],
 }

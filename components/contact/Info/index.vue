@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { UserData } from '~/types'
+import type { UserData } from '@/types'
 
 const { data: userData } = await useMyFetch<UserData>(
-  ApiEndpoints.FREELANCER_INFO
+  ApiEndpoints.FREELANCER_INFO,
 )
 </script>
 
@@ -50,7 +50,7 @@ const { data: userData } = await useMyFetch<UserData>(
   // .contact-info__item
 
   &__item {
-    @apply flex gap-3 items-center;
+    @apply flex items-center gap-3;
   }
 
   // .contact-info__item--icon

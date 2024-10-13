@@ -1,11 +1,11 @@
 <script setup lang="ts">
 interface Props {
-  avatar: string
+  avatar: string | undefined
 }
 
-const { public: publicEnv } = useRuntimeConfig()
-
 const { avatar } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
 
 const { parallaxStyle } = useParallaxBackground()
 
@@ -21,7 +21,7 @@ const backgroundImageStyles = computed(() => {
       modifiers: {
         format: 'webp',
       },
-    }
+    },
   )
   return {
     backgroundImage: `url(${imgUrl})`,
@@ -32,10 +32,12 @@ const backgroundImageStyles = computed(() => {
 <template>
   <div class="about-avatar">
     <div class="about-avatar__wrapper">
-      <div
-        class="about-avatar__image"
-        :style="{ ...parallaxStyle, ...backgroundImageStyles }"
-      />
+      <ClientOnly>
+        <div
+          class="about-avatar__image"
+          :style="{ ...parallaxStyle, ...backgroundImageStyles }"
+        />
+      </ClientOnly>
     </div>
   </div>
 </template>
@@ -45,13 +47,13 @@ const backgroundImageStyles = computed(() => {
   // .about-avatar__wrapper
 
   &__wrapper {
-    @apply relative h-full aspect-square border-[1.125rem] rounded-full border-solid border-background overflow-hidden shadow-avatar;
+    @apply relative aspect-square h-full overflow-hidden rounded-full border-[1.125rem] border-solid border-background shadow-avatar;
   }
 
   // .about-avatar__image
 
   &__image {
-    @apply absolute w-auto h-auto -top-5 -left-5 -right-5 -bottom-5 transition-all duration-0 bg-cover bg-no-repeat;
+    @apply absolute -bottom-5 -left-5 -right-5 -top-5 h-auto w-auto bg-cover bg-no-repeat transition-all duration-0;
   }
 }
 </style>
