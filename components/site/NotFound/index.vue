@@ -1,11 +1,12 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-
 interface Props {
   title: string
   caption: string
 }
+
 const { title, caption } = defineProps<Props>()
+
+const localePath = useLocalePath()
 </script>
 
 <template>

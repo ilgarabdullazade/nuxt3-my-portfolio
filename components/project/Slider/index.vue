@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import type { GalleryImage } from '~/types'
-const { public: publicEnv } = useRuntimeConfig()
+import type { GalleryImage } from '@/types'
 
 interface Props {
   title: string
   gallery: GalleryImage[]
 }
+
 const { title, gallery } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const onSwiperInit = (swiper: any) => {
@@ -40,7 +42,7 @@ const onSwiperInit = (swiper: any) => {
     @swiper="onSwiperInit"
   >
     <SwiperSlide
-      v-for="item in gallery"
+      v-for="item of gallery"
       :key="item.image"
       class="project-slider__slide"
     >

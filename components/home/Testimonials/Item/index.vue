@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-import type { Testimonial } from '~/types'
-const { public: publicEnv } = useRuntimeConfig()
+import type { Testimonial } from '@/types'
 
 interface Props {
   testimonial: Testimonial
 }
+
 const { testimonial } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Occupation } from '~/types'
+import type { Occupation } from '@/types'
 
 interface Props {
   education: Occupation

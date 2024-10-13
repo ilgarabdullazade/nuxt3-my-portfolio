@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { WhatIDO } from '~/types'
+import type { WhatIDO } from '@/types'
 
 interface Props {
   execute: WhatIDO

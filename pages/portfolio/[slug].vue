@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Project } from '~/types'
+import type { Project } from '@/types'
 
 definePageMeta({ layout: 'project' })
 
@@ -35,9 +35,9 @@ defineOgImageComponent('Project', {
       <div class="project__body">
         <div class="project__content">
           <ProjectSlider
-            v-if="project!.gallery.length"
-            :title="project!.title"
-            :gallery="project!.gallery"
+            v-if="project?.gallery.length"
+            :title="project.title"
+            :gallery="project.gallery"
           />
           <div v-else class="project__content--empty">
             {{ $t('portfolio.images_not_found') }}

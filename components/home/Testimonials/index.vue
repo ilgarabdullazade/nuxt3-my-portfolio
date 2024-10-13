@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Testimonial } from '~/types'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import type { Testimonial } from '@/types'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
 const { data: testimonials, pending } = await useMyFetch<Testimonial[]>(
   ApiEndpoints.TESTIMONIALS,
@@ -43,7 +43,7 @@ const { data: testimonials, pending } = await useMyFetch<Testimonial[]>(
           }"
         >
           <SwiperSlide
-            v-for="testimonial in testimonials"
+            v-for="testimonial of testimonials"
             :key="testimonial.full_name"
             class="testimonials__slide"
           >
@@ -111,4 +111,4 @@ const { data: testimonials, pending } = await useMyFetch<Testimonial[]>(
   @apply translate-y-5 opacity-0;
 }
 </style>
-~/utils/apiEndpoints
+@/utils/apiEndpoints

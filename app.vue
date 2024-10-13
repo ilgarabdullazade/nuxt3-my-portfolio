@@ -54,7 +54,7 @@ defineOgImageComponent('Main', {
 </script>
 
 <template>
-  <Html :lang="i18nHead.htmlAttrs!.lang" :dir="i18nHead.htmlAttrs!.dir">
+  <Html :lang="i18nHead.htmlAttrs?.lang" :dir="i18nHead.htmlAttrs?.dir">
     <Body>
       <div class="app">
         <LayoutsParallaxBackground class="app__parallax" />

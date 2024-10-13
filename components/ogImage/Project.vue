@@ -1,10 +1,13 @@
 <script setup lang="ts">
+interface Props {
+  title: string | undefined
+  image: string
+}
+
+const { title = 'Og Image Template' } = defineProps<Props>()
+
 defineOptions({
   inheritAttrs: false,
-})
-defineProps({
-  title: { type: String, default: 'Og Image Template' },
-  image: { type: String, required: true },
 })
 
 const { public: publicEnv } = useRuntimeConfig()

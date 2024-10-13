@@ -3,9 +3,9 @@ interface Props {
   avatar: string | undefined
 }
 
-const { public: publicEnv } = useRuntimeConfig()
-
 const { avatar } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
 
 const { parallaxStyle } = useParallaxBackground()
 

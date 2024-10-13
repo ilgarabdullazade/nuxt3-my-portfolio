@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Technology } from '~/types'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import type { Technology } from '@/types'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
 const { data: skills, status } = await useMyFetch<Technology[]>(
   ApiEndpoints.TECHNOLOGIES,
@@ -48,7 +48,7 @@ const { data: skills, status } = await useMyFetch<Technology[]>(
           }"
         >
           <SwiperSlide
-            v-for="skill in skills"
+            v-for="skill of skills"
             :key="skill.name"
             class="skills__slide"
           >
@@ -103,4 +103,4 @@ const { data: skills, status } = await useMyFetch<Technology[]>(
   }
 }
 </style>
-~/utils/apiEndpoints
+@/utils/apiEndpoints

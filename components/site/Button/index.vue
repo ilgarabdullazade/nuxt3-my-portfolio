@@ -1,6 +1,19 @@
 <script setup lang="ts">
 import { cva, type VariantProps } from 'class-variance-authority'
 
+withDefaults(
+  defineProps<{
+    intent: ButtonProps['intent']
+    size?: ButtonProps['size']
+    to?: string | null
+  }>(),
+  {
+    intent: 'primary',
+    size: 'medium',
+    to: null,
+  },
+)
+
 const button = cva('button', {
   variants: {
     intent: {
@@ -19,19 +32,6 @@ const button = cva('button', {
 })
 
 type ButtonProps = VariantProps<typeof button>
-
-withDefaults(
-  defineProps<{
-    intent: ButtonProps['intent']
-    size?: ButtonProps['size']
-    to?: string | null
-  }>(),
-  {
-    intent: 'primary',
-    size: 'medium',
-    to: null,
-  },
-)
 </script>
 
 <template>

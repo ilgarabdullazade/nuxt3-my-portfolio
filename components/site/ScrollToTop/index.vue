@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const scrollButton = ref()
+const scrollButton = ref<HTMLButtonElement>()
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -10,9 +10,9 @@ const scrollToTop = () => {
 
 const userScroll = () => {
   if (window.scrollY > 100) {
-    scrollButton.value.classList.add('show')
+    scrollButton.value?.classList.add('show')
   } else {
-    scrollButton.value.classList.remove('show')
+    scrollButton.value?.classList.remove('show')
   }
 }
 

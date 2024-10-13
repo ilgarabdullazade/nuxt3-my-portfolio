@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { UserData } from '~/types'
+import type { UserData } from '@/types'
 
 const { data: userData } = await useMyFetch<UserData>(
   ApiEndpoints.FREELANCER_INFO,

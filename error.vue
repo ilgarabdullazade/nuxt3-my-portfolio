@@ -1,5 +1,11 @@
 <script setup lang="ts">
-defineProps({ error: { type: Object, default: null } })
+import type { NuxtError } from '#app'
+
+interface Props {
+  error: NuxtError | null
+}
+
+defineProps<Props>()
 
 const handleError = () => clearError({ redirect: '/' })
 </script>

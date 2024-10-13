@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import type { Technology } from '~/types'
+import type { Technology } from '@/types'
 
 interface Props {
   technologies: Technology[]
 }
+
 const { technologies } = defineProps<Props>()
 </script>
 
@@ -14,7 +15,7 @@ const { technologies } = defineProps<Props>()
     }}</strong>
     <ul class="project-technology__list">
       <li
-        v-for="technology in technologies"
+        v-for="technology of technologies"
         :key="technology.name"
         class="project-technology__item"
       >

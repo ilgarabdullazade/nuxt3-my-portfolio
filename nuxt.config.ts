@@ -63,10 +63,10 @@ export default defineNuxtConfig({
   ],
 
   tailwindcss: {
-    cssPath: '~/assets/scss/tailwind.scss',
+    cssPath: '@/assets/scss/tailwind.scss',
   },
 
-  css: ['~/assets/scss/app.scss'],
+  css: ['@/assets/scss/app.scss'],
 
   googleFonts: {
     families: {

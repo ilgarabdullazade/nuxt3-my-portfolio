@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import type { AboutInfo } from '~/types'
-
-const { public: publicEnv } = useRuntimeConfig()
-
-const localePath = useLocalePath()
+import type { AboutInfo } from '@/types'
 
 interface Props {
   info: AboutInfo
 }
+
 const { info } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
+
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -25,7 +26,7 @@ const { info } = defineProps<Props>()
             disableOnInteraction: false,
           }"
         >
-          <SwiperSlide v-for="profession in info.profession" :key="profession">
+          <SwiperSlide v-for="profession of info.profession" :key="profession">
             <span>{{ profession }}</span>
           </SwiperSlide>
         </Swiper>

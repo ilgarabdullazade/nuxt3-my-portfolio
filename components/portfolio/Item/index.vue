@@ -1,13 +1,15 @@
 <script lang="ts" setup>
-import type { ProjectThumb } from '~/types'
-const { public: publicEnv } = useRuntimeConfig()
-
-const localePath = useLocalePath()
+import type { ProjectThumb } from '@/types'
 
 interface Props {
   project: ProjectThumb
 }
+
 const { project } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
+
+const localePath = useLocalePath()
 </script>
 
 <template>
@@ -31,7 +33,7 @@ const { project } = defineProps<Props>()
       <strong class="portfolio-item__name">{{ project.title }}</strong>
       <div v-if="project.tag.length" class="portfolio-item__taglist">
         <span
-          v-for="tag in project.tag"
+          v-for="tag of project.tag"
           :key="tag"
           class="portfolio-item__tag"
           >{{ tag }}</span

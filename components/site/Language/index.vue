@@ -59,7 +59,7 @@ const availableLocales = computed(() => {
       <Transition name="slide-up" mode="out-in">
         <ul v-show="showDropdown" class="language__menu">
           <li
-            v-for="availableLocale in availableLocales"
+            v-for="availableLocale of availableLocales"
             :key="availableLocale.code"
             class="language__item"
             @click="changeLanguage(availableLocale.code)"

@@ -2,7 +2,7 @@
 import type { PluginConfigs } from '@formkit/vue'
 import type { FormKitNode } from '@formkit/core'
 import { reset } from '@formkit/core'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
 const submitted = ref(false)
 
@@ -19,7 +19,7 @@ const config = inject<PluginConfigs>(Symbol.for('FormKitConfig'))
 const { locale } = useI18n()
 
 const setFormLocale = () => {
-  if (config) config!.locale = locale.value
+  if (config) config.locale = locale.value
 }
 onMounted(() => {
   setFormLocale()

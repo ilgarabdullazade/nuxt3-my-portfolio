@@ -1,14 +1,10 @@
 <script lang="ts" setup>
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  subtitle: {
-    type: String,
-    required: true,
-  },
-})
+interface Props {
+  title: string
+  subtitle: string
+}
+
+defineProps<Props>()
 </script>
 
 <template>

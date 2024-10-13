@@ -1,11 +1,13 @@
 <script lang="ts" setup>
-import type { Experience } from '~/types'
-const { public: publicEnv } = useRuntimeConfig()
+import type { Experience } from '@/types'
 
 interface Props {
   experience: Experience
 }
+
 const { experience } = defineProps<Props>()
+
+const { public: publicEnv } = useRuntimeConfig()
 </script>
 
 <template>

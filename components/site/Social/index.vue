@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { Social } from '~/types'
-import { ApiEndpoints } from '~/utils/apiEndpoints'
+import type { Social } from '@/types'
+import { ApiEndpoints } from '@/utils/apiEndpoints'
 
 const { data: socials } = await useMyFetch<Social[]>(ApiEndpoints.SOCIAL_LINKS)
 </script>
@@ -8,7 +8,7 @@ const { data: socials } = await useMyFetch<Social[]>(ApiEndpoints.SOCIAL_LINKS)
 <template>
   <div class="social">
     <ul v-if="socials?.length" class="social__list">
-      <li v-for="social in socials" :key="social.url" class="social__item">
+      <li v-for="social of socials" :key="social.url" class="social__item">
         <NuxtLink
           :to="social.url"
           class="social__link"

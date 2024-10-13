@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import type { Project } from '~/types'
+import type { Project } from '@/types'
 
 interface Props {
   project: Project
 }
+
 const { project } = defineProps<Props>()
 
 const dayjs = useDayjs()

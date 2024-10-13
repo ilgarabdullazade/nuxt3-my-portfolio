@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Hobby } from '~/types'
+import type { Hobby } from '@/types'
 
 interface Props {
   hobby: Hobby

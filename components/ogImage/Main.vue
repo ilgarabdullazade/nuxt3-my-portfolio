@@ -1,14 +1,13 @@
 <script setup lang="ts">
+interface Props {
+  description: string
+}
+
+const { description } = defineProps<Props>()
+
 defineOptions({
   inheritAttrs: false,
 })
-defineProps({
-  description: {
-    type: String,
-    default: '',
-  },
-})
-
 const { public: publicEnv } = useRuntimeConfig()
 </script>
 
@@ -37,7 +36,7 @@ const { public: publicEnv } = useRuntimeConfig()
             <span class="pl-2 font-normal">{{ publicEnv.ownerLastName }}</span>
           </h1>
           <div class="text-2xl text-gray-500">
-            {{ description }}
+            {{ description ?? '' }}
           </div>
         </div>
       </div>

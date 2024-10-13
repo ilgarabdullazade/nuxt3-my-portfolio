@@ -13,7 +13,7 @@ const { items = 2, itemHeight = 'h-36' } = defineProps<Props>()
       <SiteSkeletonItem class="skeleton__title" />
       <div class="skeleton__body" :class="[`grid-cols-${items}`]">
         <SiteSkeletonItem
-          v-for="i in items"
+          v-for="i of items"
           :key="i"
           :class="`${itemHeight}`"
         />
