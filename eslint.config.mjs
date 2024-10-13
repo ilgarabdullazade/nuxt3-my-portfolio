@@ -4,6 +4,8 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 export default withNuxt(eslintPluginPrettierRecommended, {
   rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
     'prettier/prettier': [
       'error',
       {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { GalleryImage } from '@/types'
+import type { Swiper as SwiperType } from 'swiper/types'
 
 interface Props {
   title: string
@@ -10,11 +11,9 @@ const { title, gallery } = defineProps<Props>()
 
 const { public: publicEnv } = useRuntimeConfig()
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const onSwiperInit = (swiper: any) => {
+const onSwiperInit = (swiper: SwiperType) => {
   const { initDOM } = useAfterOutIn(() => {
-    swiper.pagination.enable()
-    swiper.navigation.enable()
+    swiper.pagination.update()
   })
   initDOM()
 }

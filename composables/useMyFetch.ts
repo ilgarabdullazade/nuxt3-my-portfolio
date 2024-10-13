@@ -1,10 +1,15 @@
 import type { UseFetchOptions } from 'nuxt/app'
 import { defu } from 'defu'
 
-export function useMyFetch<T>(url: string, options: UseFetchOptions<T> = {}) {
+export const useMyFetch = <T>(
+  url: string,
+  options: UseFetchOptions<T> = {},
+) => {
   const { public: publicEnv } = useRuntimeConfig()
-  const language = useCookie('language')
+
   const { locale } = useI18n()
+
+  const language = useCookie('language')
   const langCode = ref<string>(
     import.meta.server ? locale.value : (language.value ?? 'en'),
   )

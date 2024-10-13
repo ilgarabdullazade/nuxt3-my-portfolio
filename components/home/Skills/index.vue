@@ -13,12 +13,12 @@ const { data: skills, status } = await useMyFetch<Technology[]>(
 
 <template>
   <section v class="skills">
-    <SiteSkeletonSection v-if="status.pending" :items="1" item-height="h-20" />
-    <div
-      v-if="skills?.length"
-      :class="{ hidden: status.pending }"
-      class="skills__wrapper"
-    >
+    <SiteSkeletonSection
+      v-show="status === 'pending'"
+      :items="1"
+      item-height="h-20"
+    />
+    <div v-show="skills?.length" class="skills__wrapper">
       <SiteTitle class="skills__title">{{ $t('skills.title') }}</SiteTitle>
       <div class="skills__body">
         <Swiper

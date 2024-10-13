@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const localePath = useLocalePath()
+
 const route = useRoute()
 
 const isMobile = useMediaQuery('not all and (min-width: 1024px)')

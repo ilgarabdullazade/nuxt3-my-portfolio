@@ -7,7 +7,11 @@ export default defineNuxtConfig({
   app: {
     layoutTransition: { name: 'slide', mode: 'out-in' },
     head: {
-      // templateParams: '%pageTitle %separator %siteName',
+      titleTemplate: `%pageTitle %separator %siteName`,
+      templateParams: {
+        siteName: process.env.NUXT_PUBLIC_SITE_NAME ?? '',
+        separator: '|',
+      },
       link: [
         {
           rel: 'apple-touch-icon',
@@ -79,12 +83,31 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    vueI18n: './i18n/i18n.config.ts',
-    detectBrowserLanguage: {
-      alwaysRedirect: true,
-      fallbackLocale: 'en-US',
-      redirectOn: 'root',
-    },
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL ?? '',
+    skipSettingLocaleOnNavigate: true,
+    lazy: true,
+    langDir: 'i18n/locales',
+    defaultLocale: 'en',
+    locales: [
+      {
+        code: 'en',
+        language: 'en-US',
+        file: 'en-US.json',
+        name: 'English',
+      },
+      {
+        code: 'az',
+        language: 'az-AZ',
+        file: 'az-AZ.json',
+        name: 'Azərbaycanca',
+      },
+      {
+        code: 'ru',
+        language: 'ru-RU',
+        file: 'ru-RU.json',
+        name: 'Русский',
+      },
+    ],
   },
 
   swiper: {
@@ -119,4 +142,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2024-10-13',
 })

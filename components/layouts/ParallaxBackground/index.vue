@@ -21,10 +21,12 @@ const backgroundImageStyles = computed(() => {
 </script>
 
 <template>
-  <div
-    class="parallax-background"
-    :style="{ ...parallaxStyle, ...backgroundImageStyles }"
-  />
+  <ClientOnly>
+    <div
+      class="parallax-background"
+      :style="{ ...parallaxStyle, ...backgroundImageStyles }"
+    />
+  </ClientOnly>
 </template>
 
 <style lang="scss" scoped>

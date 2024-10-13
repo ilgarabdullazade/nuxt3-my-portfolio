@@ -2,7 +2,7 @@
 import type { Testimonial } from '@/types'
 import { ApiEndpoints } from '@/utils/apiEndpoints'
 
-const { data: testimonials, pending } = await useMyFetch<Testimonial[]>(
+const { data: testimonials, status } = await useMyFetch<Testimonial[]>(
   ApiEndpoints.TESTIMONIALS,
   {
     server: false,
@@ -13,12 +13,8 @@ const { data: testimonials, pending } = await useMyFetch<Testimonial[]>(
 
 <template>
   <section class="testimonials">
-    <SiteSkeletonSection v-if="pending" :items="2" />
-    <div
-      v-if="testimonials?.length"
-      :class="{ hidden: pending }"
-      class="testimonials__wrapper"
-    >
+    <SiteSkeletonSection v-show="status === 'pending'" />
+    <div v-show="testimonials?.length" class="testimonials__wrapper">
       <SiteTitle class="testimonials__title">{{
         $t('testimonials.title')
       }}</SiteTitle>

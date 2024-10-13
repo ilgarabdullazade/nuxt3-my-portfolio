@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
+
 const { public: publicEnv } = useRuntimeConfig()
 </script>
 

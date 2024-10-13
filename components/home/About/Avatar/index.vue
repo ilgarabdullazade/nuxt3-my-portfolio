@@ -32,10 +32,12 @@ const backgroundImageStyles = computed(() => {
 <template>
   <div class="about-avatar">
     <div class="about-avatar__wrapper">
-      <div
-        class="about-avatar__image"
-        :style="{ ...parallaxStyle, ...backgroundImageStyles }"
-      />
+      <ClientOnly>
+        <div
+          class="about-avatar__image"
+          :style="{ ...parallaxStyle, ...backgroundImageStyles }"
+        />
+      </ClientOnly>
     </div>
   </div>
 </template>
