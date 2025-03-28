@@ -1,4 +1,4 @@
-ARG NODE_VERSION=20
+ARG NODE_VERSION=20.16.0
 
 FROM node:${NODE_VERSION}-slim as base
 
@@ -6,9 +6,9 @@ ARG PORT=3000
 
 WORKDIR /app
 
-COPY package.json .
+COPY package.json yarn.lock ./
 
-RUN yarn install
+RUN yarn install --frozen-lockfile
 
 COPY . .
 
@@ -16,6 +16,6 @@ RUN yarn build
 
 ENV NODE_ENV=production
 
-EXPOSE $PORT
+EXPOSE ${PORT}
 
-CMD [ "node", ".output/server/index.mjs" ]
+CMD ["node", ".output/server/index.mjs"]
